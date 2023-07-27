@@ -149,6 +149,7 @@ body{
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #fefbf0;
   padding-top: 2vh;
+  padding-bottom: 2vh;
 }
 
 .box {
@@ -209,24 +210,61 @@ and (max-width : 600px) {
   z-index: 2;
 }
 
-#small-boxes-container {
+.small-boxes-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.small-box-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 30px;
+  flex-direction: column;
+  align-items: center;
 }
 
 .small-box {
-  width: 30px;
-  height: 30px;
+  width: 100%;
   margin: 5px;
   border-radius: 5px;
-  background-size: cover;
+  background-color: #fefbf0;
+  padding: 10px;
+  text-align: left;
+  padding: 20px;
+}
+
+/* Add the following styles to customize the scrollbar appearance for webkit browsers (Chrome, Safari) */
+.small-box::-webkit-scrollbar {
+  width: 6px;
+}
+
+.small-box::-webkit-scrollbar-track {
+  background-color: #fefbf0;
+}
+
+.small-box::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+
+/* New styles for the title to appear below each small box */
+.small-box-title {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+
+.content-text {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.small-box-title {
+  text-align: center;
 }
 
 .return-button { 
-
-  padding: 10px 20px;
+  width: 40px;
+  height: 40px;
+  padding:4px;
   background-color: #fefbf0;
   color: black;
   border: none;
@@ -235,17 +273,18 @@ and (max-width : 600px) {
   font-family: 'Raleway', sans-serif;
   font-weight: 500;
   font-size: 14px;
+  right: 0;
+  margin-top: 5vh;
+  margin-left: 5vh;
   margin-bottom: 5vh;
   overflow: hidden;
   font-family: 'Raleway', sans-serif;
-  letter-spacing: 0.5vw; 
 }
 
 .return-button:hover {
   background-color: #eee;
 }
 
-/* ... (your CSS remains unchanged) ... */
 
 /* Add the following CSS class to hide the main box buttons */
 .hidden-box-buttons .box-button {
