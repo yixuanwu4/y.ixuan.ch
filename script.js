@@ -19,9 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
     { title: 'Suicidal posts detection', text: 'This project involved comparing and utilizing multiple algorithms to predict labels for suicidal and general posts sourced from Reddit.' },
     { title: 'Cytolytics Cell Type Detection', text: 'During my internship at the esteemed company, Cytolytics, I undertook a project wherein I adeptly devised and implemented methodologies aimed at discerning the correlation between various cell types and their respective marker sets.' },
     { title: 'Vocabulary Learning Model for Children', text: 'This model utilizes MDA framework mechanics to enhance children\'s language learning with a key focus on gamification as a rewarding system.' },
-    { title: 'Political Speech Annotation', text: 'This project involved a thorough political corpus annotation task, covering four distinct layers of annotation: lemma, part of speech (POS), named entity, and coreference.' },
-    { title: 'Enhancing Chinese Text Classification with Radical Features', text: 'For my master\'s final project at Eberhard Karl University of Tübingen, I demonstrated the significance and provided evidence that incorporating radical segmentation in Chinese text classification yields better results, particularly in low-resource training settings compared to traditional word and character segmentation.' },
-  ];
+    ];
 
   const smallBoxInfo3 = [
     { title: 'Software Translation', text: 'I provided the Chinese translation of inlang - a globalization infrastructure for software ' },

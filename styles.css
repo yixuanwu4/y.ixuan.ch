@@ -52,7 +52,7 @@ body{
   right: 0;
   bottom: 0;
   float: right;
-  opacity: 10%;
+  opacity: 20%;
   
 }
 
@@ -125,6 +125,7 @@ body{
   right: 0;
   text-align: left;
   font-family: 'Raleway';
+  font-size: 2vh;
   padding: 5vh;
   width: 60vw;
   font-weight: 100;
@@ -174,7 +175,7 @@ body{
   transition: 0.2s; 
   cursor: pointer;
   font-weight: 500;
-  font-size: small;
+  font-size: 2vh;
   /* Additional styles to center the text */
   display: flex;
   justify-content: center;
@@ -217,6 +218,7 @@ and (max-width : 600px) {
 }
 
 .small-box-container {
+  margin-top: 1vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -230,6 +232,8 @@ and (max-width : 600px) {
   padding: 10px;
   text-align: left;
   padding: 20px;
+  font-family: 'Raleway';
+  font-size: 2vh;
 }
 
 /* Add the following styles to customize the scrollbar appearance for webkit browsers (Chrome, Safari) */
@@ -247,8 +251,10 @@ and (max-width : 600px) {
 
 /* New styles for the title to appear below each small box */
 .small-box-title {
-  font-weight: bold;
   margin-top: 10px;
+  text-align: center;
+  font-family: 'Raleway';
+  font-size: 2vh;
 }
 
 
@@ -257,9 +263,6 @@ and (max-width : 600px) {
   text-align: center;
 }
 
-.small-box-title {
-  text-align: center;
-}
 
 .return-button { 
   width: 40px;
@@ -296,7 +299,13 @@ and (max-width : 600px) {
   display: flex;
 }
 
+
 .contact {
+  background-color: #fefbf0;
+}
+
+.contacts {
+  z-index: 0;
   background-color: #fefbf0;
   font-family: 'Raleway';
   right: 0;
@@ -308,4 +317,33 @@ and (max-width : 600px) {
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #000;
   padding-top: 2vh;
+}
+
+.dropM {
+  padding: 20px;
+  font-family: 'Raleway';
+  font-size: 2vh;
+}
+
+
+.email {
+  right: 0;
+  width: 10vh;
+  height: 10vh;
+  background: transparent;
+  border: none;
+  background-image: url('icons/BlackEmail.png');
+  background-size: cover;
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.email:hover {
+  background-image: url('icons/BlackOpenEmail.png');
+  text-decoration: none;
 }
