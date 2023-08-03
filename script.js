@@ -1,12 +1,20 @@
 document.addEventListener('DOMContentLoaded', function () {
   const mainBoxes = document.querySelectorAll('.box-button');
+  const mainBoxesTitles = document.querySelectorAll('.boxtitle');
   const smallBoxesContainer = document.getElementById('small-boxes-container');
   const returnButton = document.getElementById('returnButton');
 
   returnButton.style.visibility='hidden';
 
-  const smallBoxImages = ['box1.png', 'box2.png', 'box3.png']; // Add other file names as needed
-  const smallBoxLinks = ['', '', '']; // To be added to the github repositories
+  const smallBoxImages = [
+    ['icons/suicidal.png', 'icons/cytolytics.png', 'icons/wordLearning.png', 'icons/politic.png', 'icons/thesis.png'],
+    ['icons/weather.png', 'icons/todo.png', 'icons/inventory.png'],
+    ['icons/inlang.png']
+  ];
+  const smallBoxLinksNLP = ['https://github.com/yixuanwu4/Suicidal-posts-detection-SNLP-', 'https://github.com/yixuanwu4/Cytolytics-NLP', 'https://github.com/yixuanwu4/Adaptive-Learning-Project-vocabulary-learning-model-', 'https://github.com/yixuanwu4/Trump-Speeches-Corpus-Annotation', 'https://github.com/yixuanwu4/Thesis']; // To be added to the github repositories
+  const smallBoxLinksWeb = ['https://github.com/yixuanwu4/Suicidal-posts-detection-SNLP-', 'https://github.com/yixuanwu4/Cytolytics-NLP', 'https://github.com/yixuanwu4/Adaptive-Learning-Project-vocabulary-learning-model-', 'https://github.com/yixuanwu4/Trump-Speeches-Corpus-Annotation', 'https://github.com/yixuanwu4/Thesis']; // To be added to the github repositories
+  const smallBoxLinksTranslate = ['https://inlang.com/zh/']; // To be added to the github repositories
+
   const smallBoxInfo1 = [
     { title: 'Suicidal posts detection', text: 'This project involved comparing and utilizing multiple algorithms to predict labels for suicidal and general posts sourced from Reddit.' },
     { title: 'Cytolytics Cell Type Detection', text: 'During my internship at the esteemed company, Cytolytics, I undertook a project wherein I adeptly devised and implemented methodologies aimed at discerning the correlation between various cell types and their respective marker sets.' },
@@ -28,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
   mainBoxes.forEach((box, index) => {
     box.addEventListener('click', () => {
       mainBoxes.forEach((elem) => elem.style.display='none');
+      mainBoxesTitles.forEach((elem) => elem.style.display='none');
       // Hide the main box buttons and show the small boxes and return button
       document.querySelector('.box-container').classList.add('hidden-box-buttons');
       smallBoxesContainer.classList.remove('hidden-small-boxes');
@@ -40,12 +49,15 @@ document.addEventListener('DOMContentLoaded', function () {
       switch (index) {
         case 0:
           numberOfSmallBoxes = 5;
+          smallBoxImagesList = smallBoxImages[0];
           break;
         case 1:
-          numberOfSmallBoxes = 3; // Generate 3 to 5 boxes
+          numberOfSmallBoxes = 3; 
+          smallBoxImagesList = smallBoxImages[1];
           break;
         case 2:
           numberOfSmallBoxes = 1;
+          smallBoxImagesList = smallBoxImages[2];
           break;
         default:
           break;
@@ -70,8 +82,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const smallBox = document.createElement('div');
         smallBox.classList.add('small-box');
         // smallBox.setAttribute("href", "https://google.com");
-        smallBox.style.width = '30vw';
-        smallBox.style.height = '30vw';
+        smallBox.style.width = '15vw';
+        smallBox.style.height = '15vw';
         smallBox.style.margin = '5px';
         smallBox.style.borderRadius = '5px';
         smallBox.style.backgroundColor = '#fefbf0';
@@ -84,6 +96,8 @@ document.addEventListener('DOMContentLoaded', function () {
         titleElement.textContent = smallBoxInfo[i].title;
         titleElement.style.color = 'white';
         // smallBoxContainer.appendChild(titleElement);
+        // Set small box image
+        smallBox.style.backgroundImage = `url(${smallBoxImagesList[i]})`;
 
         // Create the content element for the text
         const contentElement = document.createElement('p');
