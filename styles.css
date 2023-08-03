@@ -354,6 +354,9 @@ and (max-width : 600px) {
   padding: 20px;
   font-family: 'Raleway';
   font-size: 2vh;
+  display: flex;
+  align-items: center;
+  justify-content: end;
 }
 
 
