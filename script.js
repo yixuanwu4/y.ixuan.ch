@@ -138,4 +138,28 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.box-container').classList.remove('hidden-box-buttons');
     smallBoxesContainer.classList.add('hidden-small-boxes');
   });
+
+  const animatedElements = document.querySelectorAll('.animated-element');
+
+
+  const intersectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('scroll-animation')
+        }
+            else {
+                entry.target.classList.remove('scroll-animation')
+            }
+        
+    })
+  },
+  { threshold: 0.5
+  });
+
+  // Observe each animated element
+  for (let i = 0; i < animatedElements.length; i++) {
+    const elements = animatedElements[i];
+ 
+    intersectionObserver.observe(elements);
+   } 
 });

@@ -332,7 +332,7 @@ p {
   background-color: #fefbf0;
 }
 
-.contacts {
+#contacts {
   z-index: 0;
   background-color: #fefbf0;
   font-family: 'Raleway';
@@ -376,4 +376,17 @@ p {
 .email:hover {
   background-image: url('icons/BlackOpenEmail.png');
   text-decoration: none;
+}
+
+
+.animated-element {
+  opacity: 0;
+  transform: translateX(-300px);
+  transition: all 0.5s ease-out;
+  transition-delay: 0.2s;
+}
+
+.scroll-animation {
+  opacity: 1;
+  transform: translateX(0);
 }
