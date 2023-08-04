@@ -43,6 +43,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
       
       returnButton.style.visibility='';
+      returnButton.style.backgroundImage = `url('../icons/back.png')`;
+      returnButton.style.backgroundSize = 'contain';
+      returnButton.style.width = '5vw';
+      returnButton.style.height = '5vw';
 
       // Determine the number of small boxes to generate based on the index of the clicked box
       let numberOfSmallBoxes = 0;
@@ -82,8 +86,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const smallBox = document.createElement('div');
         smallBox.classList.add('small-box');
         // smallBox.setAttribute("href", "https://google.com");
-        smallBox.style.width = '15vw';
-        smallBox.style.height = '15vw';
+        smallBox.style.width = '16vw';
+        smallBox.style.height = '16vw';
         smallBox.style.margin = '5px';
         smallBox.style.borderRadius = '5px';
         smallBox.style.backgroundColor = '#fefbf0';
