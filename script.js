@@ -2,9 +2,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const mainBoxes = document.querySelectorAll('.box-button');
   const mainBoxesTitles = document.querySelectorAll('.boxtitle');
   const smallBoxesContainer = document.getElementById('small-boxes-container');
-  const returnButton = document.getElementById('returnButton');
+  // const returnButton = document.getElementById('returnButton');
 
-  returnButton.style.visibility='hidden';
+  // returnButton.style.visibility='hidden';
 
   const smallBoxImages = [
     ['icons/suicidal.png', 'icons/cytolytics.png', 'icons/wordLearning.png', 'icons/politic.png', 'icons/thesis.png'],
@@ -24,9 +24,9 @@ document.addEventListener('DOMContentLoaded', function () {
   ];
 
   const smallBoxInfo2 = [
-    { title: 'Suicidal posts detection', text: 'This project involved comparing and utilizing multiple algorithms to predict labels for suicidal and general posts sourced from Reddit.' },
-    { title: 'Cytolytics Cell Type Detection', text: 'During my internship at the esteemed company, Cytolytics, I undertook a project wherein I adeptly devised and implemented methodologies aimed at discerning the correlation between various cell types and their respective marker sets.' },
-    { title: 'Vocabulary Learning Model for Children', text: 'This model utilizes MDA framework mechanics to enhance children\'s language learning with a key focus on gamification as a rewarding system.' },
+    { title: 'Weather App', text: 'This app allows users to check the weather of an location by typing in the city name. (OpenWeatherMap API is used)' },
+    { title: 'To Do App', text: 'This app allows users to add and delete items from the to do list. Items on the to do list are saved locally.' },
+    { title: 'Inventory Management System', text: 'This a a simplified process of ordering, storing and tracking goods throughout the "supply chain".' },
     ];
 
   const smallBoxInfo3 = [
@@ -42,11 +42,11 @@ document.addEventListener('DOMContentLoaded', function () {
       smallBoxesContainer.classList.remove('hidden-small-boxes');
 
       
-      returnButton.style.visibility='';
-      returnButton.style.backgroundImage = `url('../icons/back.png')`;
-      returnButton.style.backgroundSize = 'contain';
-      returnButton.style.width = '5vw';
-      returnButton.style.height = '5vw';
+      // returnButton.style.visibility='';
+      // returnButton.style.backgroundImage = `url('../icons/back.png')`;
+      // returnButton.style.backgroundSize = 'contain';
+      // returnButton.style.width = '5vw';
+      // returnButton.style.height = '5vw';
 
       // Determine the number of small boxes to generate based on the index of the clicked box
       let numberOfSmallBoxes = 0;
@@ -54,14 +54,17 @@ document.addEventListener('DOMContentLoaded', function () {
         case 0:
           numberOfSmallBoxes = 5;
           smallBoxImagesList = smallBoxImages[0];
+          smallBoxLinks = smallBoxLinksNLP;
           break;
         case 1:
           numberOfSmallBoxes = 3; 
           smallBoxImagesList = smallBoxImages[1];
+          smallBoxLinks = smallBoxLinksWeb;
           break;
         case 2:
           numberOfSmallBoxes = 1;
           smallBoxImagesList = smallBoxImages[2];
+          smallBoxLinks = smallBoxLinksTranslate;
           break;
         default:
           break;
@@ -83,9 +86,10 @@ document.addEventListener('DOMContentLoaded', function () {
         smallBoxContainer.classList.add('small-box-container');
 
         // Create smallBox element
-        const smallBox = document.createElement('div');
+        const smallBox = document.createElement('a');
         smallBox.classList.add('small-box');
-        // smallBox.setAttribute("href", "https://google.com");
+        smallBox.setAttribute("href", `${smallBoxLinks[i]}`);
+        smallBox.target = '_blank'; // Open link in a new tab
         smallBox.style.width = '16vw';
         smallBox.style.height = '16vw';
         smallBox.style.margin = '5px';
@@ -117,27 +121,48 @@ document.addEventListener('DOMContentLoaded', function () {
         smallBoxesContainer.appendChild(smallBoxContainer);
       }
 
-      // Add click event to small boxes to hide them when clicked
-      const smallBoxes = document.querySelectorAll('.small-box');
-      smallBoxes.forEach((smallBox) => {
-        smallBox.addEventListener('click', () => {
-          // Hide the small boxes and return button, and show the main box buttons
-          document.querySelector('.box-container').classList.remove('hidden-box-buttons');
-          smallBoxesContainer.classList.add('hidden-small-boxes');
-        });
-      });
+
+      // Push the current URL to the browser's history
+      history.pushState({ view: 'small-boxes' }, 'Small Boxes', '#' + index);
+
     });
   });
 
-  returnButton.addEventListener('click', () => {
-    returnButton.style.visibility='hidden';
-    mainBoxes.forEach((elem) => elem.style.display='');
-    // Clear the existing small boxes if any
-    smallBoxesContainer.innerHTML = '';
-    // Hide the small boxes and return button, and show the main box buttons
-    document.querySelector('.box-container').classList.remove('hidden-box-buttons');
-    smallBoxesContainer.classList.add('hidden-small-boxes');
+  window.addEventListener('popstate', (event) => {
+    if (event.state && event.state.view === 'small-boxes') {
+      // Show the small boxes container
+      smallBoxesContainer.classList.remove('hidden-small-boxes');
+      // Hide the main box buttons
+      document.querySelector('.box-container').classList.add('hidden-box-buttons');
+    } else {
+      // Hide the small boxes container
+      smallBoxesContainer.classList.add('hidden-small-boxes');
+      // Show the main box buttons
+      document.querySelector('.box-container').classList.remove('hidden-box-buttons');
+      
+      // Clear the existing small boxes if any
+      smallBoxesContainer.innerHTML = '';
+  
+      // Show the main box buttons and titles
+      mainBoxes.forEach((elem) => (elem.style.display = ''));
+      mainBoxesTitles.forEach((elem) => (elem.style.display = ''));
+    }
   });
+  
+  
+
+
+  // returnButton.addEventListener('click', () => {
+  //   returnButton.style.visibility='hidden';
+  //   mainBoxes.forEach((elem) => elem.style.display='');
+  //   // Clear the existing small boxes if any
+  //   smallBoxesContainer.innerHTML = '';
+  //   // Hide the small boxes and return button, and show the main box buttons
+  //   document.querySelector('.box-container').classList.remove('hidden-box-buttons');
+  //   smallBoxesContainer.classList.add('hidden-small-boxes');
+  // });
+
+  
 
   const animatedElements = document.querySelectorAll('.animated-element');
 

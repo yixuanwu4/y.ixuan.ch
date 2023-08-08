@@ -260,6 +260,7 @@ and (max-width : 600px) {
   background-repeat: no-repeat;
   background-position: center;
   padding: 20px; 
+  text-decoration: none; 
 
   /* Add flexbox styles */
   display: flex;
@@ -295,7 +296,7 @@ p {
 
 @media all and (max-width: 1600px)  {  p  { font-size:1.2vmin;  } }
 @media all and (min-width: 2000px)  {  p  { font-size:1.5vmin;  } }
-
+/* 
 .return-button { 
   width: 40px;
   height: 40px;
@@ -314,7 +315,7 @@ p {
 
 .return-button:hover {
   background-color: #eee;
-}
+} */
 
 
 /* Add the following CSS class to hide the main box buttons */
