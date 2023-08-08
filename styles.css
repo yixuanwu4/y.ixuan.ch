@@ -194,6 +194,7 @@ body{
   text-align: center;
   font-family: 'Raleway';
   font-size: 2vh;
+  margin-bottom: 2em;
 }
 
 
@@ -246,6 +247,7 @@ and (max-width : 600px) {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 2em;
 }
 
 .small-box {
