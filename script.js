@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     ['icons/inlang.png']
   ];
   const smallBoxLinksNLP = ['https://github.com/yixuanwu4/Suicidal-posts-detection-SNLP-', 'https://github.com/yixuanwu4/Cytolytics-NLP', 'https://github.com/yixuanwu4/Adaptive-Learning-Project-vocabulary-learning-model-', 'https://github.com/yixuanwu4/Trump-Speeches-Corpus-Annotation', 'https://github.com/yixuanwu4/Thesis']; // To be added to the github repositories
-  const smallBoxLinksWeb = ['https://github.com/yixuanwu4/Suicidal-posts-detection-SNLP-', 'https://github.com/yixuanwu4/Cytolytics-NLP', 'https://github.com/yixuanwu4/Adaptive-Learning-Project-vocabulary-learning-model-', 'https://github.com/yixuanwu4/Trump-Speeches-Corpus-Annotation', 'https://github.com/yixuanwu4/Thesis']; // To be added to the github repositories
+  const smallBoxLinksWeb = ['https://github.com/yixuanwu4/weather-app', 'https://github.com/yixuanwu4/ToDoApp', 'https://github.com/yixuanwu4/inventory']; // To be added to the github repositories
   const smallBoxLinksTranslate = ['https://inlang.com/zh/']; // To be added to the github repositories
 
   const smallBoxInfo1 = [
