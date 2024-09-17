@@ -1,20 +1,23 @@
-html, body {
+body, html {
   margin: 0;
   padding: 0;
-  overflow: hidden; /* Prevent the whole page from scrolling */
-  height: 100%;
+  overflow: hidden;
 }
 
 #image-container {
-  width: 100%;
-  height: 100vh; /* Full window height */
-  overflow: hidden; /* Ensure overflow is hidden */
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #scrolling-image {
   position: absolute;
   top: 0;
-  height: 100%; /* Fit the height of the window */
-  left: 0; /* Start at the leftmost side */
+  left: 0;
+  height: 100%;
+  width: auto; /* Preserve aspect ratio */
 }

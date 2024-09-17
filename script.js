@@ -1,71 +1,77 @@
 document.addEventListener('DOMContentLoaded', () => {
     const image = document.getElementById('scrolling-image');
+    const container = document.getElementById('image-container');
   
-    if (!image) {
-      console.error('Image element not found!');
-      return;
+    if (!image || !container) {
+        console.error('Image or container element not found!');
+        return;
     }
   
     let maxScrollPosition = 0;
     let currentScrollPosition = 0;
   
-    // Function to calculate the maximum scrollable position
     const updateMaxScrollPosition = () => {
-      const imageWidth = image.naturalWidth || image.width;
-      const windowWidth = window.innerWidth;
-  
-      // Calculate the maximum scrollable distance, ensuring it's a valid value
-      const scrollPos = Math.max(0, imageWidth - windowWidth);
-  
-      console.log(`Image width: ${imageWidth}, Window width: ${windowWidth}`);
-      console.log('Max scroll position calculated:', scrollPos);
-  
-      return scrollPos;
+        const imageWidth = image.offsetWidth;
+        const containerWidth = container.clientWidth;
+        maxScrollPosition = Math.max(0, imageWidth - containerWidth);
+        console.log(`Image width: ${imageWidth}, Container width: ${containerWidth}, Max scroll: ${maxScrollPosition}`);
+        return maxScrollPosition;
     };
   
-    // Function to update the image position based on scroll
+    const centerImage = () => {
+        const imageWidth = image.offsetWidth;
+        const containerWidth = container.clientWidth;
+        if (imageWidth > containerWidth) {
+            currentScrollPosition = (imageWidth - containerWidth) / 2;
+            image.style.transform = `translateX(-${currentScrollPosition}px)`;
+        } else {
+            currentScrollPosition = 0;
+            image.style.transform = 'translateX(0)';
+        }
+        console.log(`Image centered. Current position: ${currentScrollPosition}`);
+    };
+  
     const updateImagePosition = (delta) => {
-      currentScrollPosition += delta;
-  
-      // Clamp currentScrollPosition between 0 and maxScrollPosition
-      currentScrollPosition = Math.max(0, Math.min(currentScrollPosition, maxScrollPosition));
-  
-      // Set the new left position based on scroll
-      image.style.left = `-${currentScrollPosition}px`;
-      console.log('Image position updated to left:', currentScrollPosition);
+        const oldPosition = currentScrollPosition;
+        currentScrollPosition += delta;
+        currentScrollPosition = Math.max(0, Math.min(currentScrollPosition, maxScrollPosition));
+        image.style.transform = `translateX(-${currentScrollPosition}px)`;
+        console.log(`
+            Delta: ${delta}
+            Old position: ${oldPosition}
+            New position: ${currentScrollPosition}
+            Max scroll: ${maxScrollPosition}
+        `);
     };
   
-    // Function to handle image load and window resize
     const onImageLoadOrResize = () => {
-      setTimeout(() => {
-        // Recalculate max scroll position
+        const containerHeight = container.clientHeight;
+        image.style.height = `${containerHeight}px`;
+        image.style.width = 'auto'; // Maintain aspect ratio
+  
         maxScrollPosition = updateMaxScrollPosition();
+        centerImage();
   
-        // Ensure currentScrollPosition stays within bounds
         currentScrollPosition = Math.min(currentScrollPosition, maxScrollPosition);
+        image.style.transform = `translateX(-${currentScrollPosition}px)`;
   
-        // Update the image's position
-        image.style.left = `-${currentScrollPosition}px`;
-      }, 100); // Small delay to ensure dimensions are fully stable
-    };
+        console.log(`Image loaded/resized. Current position: ${currentScrollPosition}`);
+    }; 
   
-    // Listen for the wheel event to scroll horizontally
     window.addEventListener('wheel', (event) => {
-      const scrollDelta = event.deltaY > 0 ? 50 : -50;
-      updateImagePosition(scrollDelta);
-    });
+        event.preventDefault();
+        console.log(`Wheel event detected. Delta Y: ${event.deltaY}`);
+        updateImagePosition(event.deltaY);
+    }, { passive: false });
   
-    // Recalculate when the window is resized
-    window.addEventListener('resize', () => {
-      onImageLoadOrResize();
-    });
+    window.addEventListener('resize', onImageLoadOrResize);
   
-    // Ensure the image is fully loaded before calculating scroll positions
     if (image.complete && image.naturalWidth) {
-      onImageLoadOrResize();
+        onImageLoadOrResize();
     } else {
-      // Wait for the image to load before calculating positions
-      image.addEventListener('load', onImageLoadOrResize);
+        image.addEventListener('load', onImageLoadOrResize);
     }
+   
+    console.log(`Image width set to: ${image.style.width}`);
   });
   
