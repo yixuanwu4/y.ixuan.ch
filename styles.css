@@ -1,7 +1,8 @@
 body, html {
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow: auto; /* Allow scrolling */
+  height: 100%;
 }
 
 #image-container {
@@ -19,5 +20,22 @@ body, html {
   top: 0;
   left: 0;
   height: 100%;
-  width: auto; /* Preserve aspect ratio */
+  width: 100%; /* Ensure the image covers the container */
+  object-fit: cover; /* Adjust the image to cover the container */
+}
+
+#text-input {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease;
+  width: 200px;
+  height: 100px;
+  color: aliceblue;
+  font-family: sans-serif;
+}
+
+#title {
+  font-size: 50px; /* Include units for font-size */
 }

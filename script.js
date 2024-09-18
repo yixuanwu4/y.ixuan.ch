@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const imageWidth = image.offsetWidth;
         const containerWidth = container.clientWidth;
         maxScrollPosition = Math.max(0, imageWidth - containerWidth);
-        console.log(`Image width: ${imageWidth}, Container width: ${containerWidth}, Max scroll: ${maxScrollPosition}`);
         return maxScrollPosition;
     };
   
@@ -22,13 +21,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const imageWidth = image.offsetWidth;
         const containerWidth = container.clientWidth;
         if (imageWidth > containerWidth) {
-            currentScrollPosition = (imageWidth - containerWidth) / 2;
+            currentScrollPosition = 0;
             image.style.transform = `translateX(-${currentScrollPosition}px)`;
         } else {
-            currentScrollPosition = 0;
             image.style.transform = 'translateX(0)';
         }
-        console.log(`Image centered. Current position: ${currentScrollPosition}`);
     };
   
     const updateImagePosition = (delta) => {
@@ -36,17 +33,10 @@ document.addEventListener('DOMContentLoaded', () => {
         currentScrollPosition += delta;
         currentScrollPosition = Math.max(0, Math.min(currentScrollPosition, maxScrollPosition));
         image.style.transform = `translateX(-${currentScrollPosition}px)`;
-        console.log(`
-            Delta: ${delta}
-            Old position: ${oldPosition}
-            New position: ${currentScrollPosition}
-            Max scroll: ${maxScrollPosition}
-        `);
     };
   
     const onImageLoadOrResize = () => {
-        const containerHeight = container.clientHeight;
-        image.style.height = `${containerHeight}px`;
+        image.style.height = `${container.clientHeight}px`;
         image.style.width = 'auto'; // Maintain aspect ratio
   
         maxScrollPosition = updateMaxScrollPosition();
@@ -54,13 +44,10 @@ document.addEventListener('DOMContentLoaded', () => {
   
         currentScrollPosition = Math.min(currentScrollPosition, maxScrollPosition);
         image.style.transform = `translateX(-${currentScrollPosition}px)`;
-  
-        console.log(`Image loaded/resized. Current position: ${currentScrollPosition}`);
     }; 
   
     window.addEventListener('wheel', (event) => {
         event.preventDefault();
-        console.log(`Wheel event detected. Delta Y: ${event.deltaY}`);
         updateImagePosition(event.deltaY);
     }, { passive: false });
   
@@ -71,7 +58,4 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         image.addEventListener('load', onImageLoadOrResize);
     }
-   
-    console.log(`Image width set to: ${image.style.width}`);
-  });
-  
+});
