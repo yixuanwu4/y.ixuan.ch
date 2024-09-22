@@ -24,18 +24,62 @@ body, html {
   object-fit: cover; /* Adjust the image to cover the container */
 }
 
+#text-box {
+  display: flex;
+  flex-direction: column; /* Stack the text and buttons vertically */
+  align-items: center; /* Center align text and buttons */
+}
+
 #text-input {
   position: absolute;
-  top: 50%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   transition: opacity 0.3s ease;
-  width: 200px;
+  width: 16%;
   height: 100px;
-  color: aliceblue;
-  font-family: sans-serif;
+  color: #f0f8ff;
+  font-family: 'Roboto', sans-serif; /* Or 'Raleway' if preferred */
+  font-weight: 100; /* 400 is normal, 700 is bold */
 }
 
 #title {
   font-size: 50px; /* Include units for font-size */
+  margin-bottom: 10px; 
 }
+
+#brief_intro, #brief_intro_1 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+#choices {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+#button-container {
+  display: flex;
+  justify-content: center;
+  position: relative; /* Ensures buttons are placed right after the text */
+  margin-top: 2px; /* Adds space between text and buttons */
+  padding: 0;
+  gap: 50%; /* Space between buttons */
+}
+
+.action-button img {
+  width: 150%; /* Set the button size */
+  transition: transform 0.2s ease;
+}
+
+.action-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.action-button:hover img {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
