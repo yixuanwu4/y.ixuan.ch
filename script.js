@@ -1,9 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     const image = document.getElementById('scrolling-image');
     const container = document.getElementById('image-container');
+    const textBox = document.getElementById('text-box'); // Get the text-box element
+    const buttons = document.querySelectorAll('.action-button'); // Get both buttons
   
-    if (!image || !container) {
-        console.error('Image or container element not found!');
+    if (!image || !container || !textBox || !buttons.length) {
+        console.error('Image, container, text-box, or buttons not found!');
         return;
     }
   
@@ -33,6 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
         currentScrollPosition += delta;
         currentScrollPosition = Math.max(0, Math.min(currentScrollPosition, maxScrollPosition));
         image.style.transform = `translateX(-${currentScrollPosition}px)`;
+
+        
     };
   
     const onImageLoadOrResize = () => {
@@ -44,6 +48,16 @@ document.addEventListener('DOMContentLoaded', () => {
   
         currentScrollPosition = Math.min(currentScrollPosition, maxScrollPosition);
         image.style.transform = `translateX(-${currentScrollPosition}px)`;
+
+        // Add event listener to both buttons to delay for 1 second, then fade out text-box **
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                setTimeout(() => {  // Delay the fade-out by 1 second 
+                    textBox.style.transition = 'opacity 1.5s ease'; // Modified: Slower fade-out (1 second) 
+                    textBox.style.opacity = '0'; // Set opacity to 0 to make it disappear 
+                }, 600); // Wait for 1 second (1000ms) before starting fade-out 
+            });
+        });
     }; 
   
     window.addEventListener('wheel', (event) => {

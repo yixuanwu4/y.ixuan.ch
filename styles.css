@@ -36,7 +36,7 @@ body, html {
   left: 50%;
   transform: translate(-50%, -50%);
   transition: opacity 0.3s ease;
-  width: 16%;
+  width: 12%;
   height: 100px;
   color: #f0f8ff;
   font-family: 'Roboto', sans-serif; /* Or 'Raleway' if preferred */
@@ -60,26 +60,29 @@ body, html {
 
 #button-container {
   display: flex;
-  justify-content: center;
-  position: relative; /* Ensures buttons are placed right after the text */
-  margin-top: 2px; /* Adds space between text and buttons */
+  justify-content: flex-start; /* Align buttons to the left */
+  position: relative;
+  margin-top: 2px;
   padding: 0;
-  gap: 50%; /* Space between buttons */
-}
-
-.action-button img {
-  width: 150%; /* Set the button size */
-  transition: transform 0.2s ease;
+  gap: 25%; /* Space between buttons */
 }
 
 .action-button {
   background: none;
   border: none;
-  padding: 0;
   cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300; /* Adjust this to match your desired font weight */
+  font-size: 25px; /* Match the font size to your text */
+  color: #f0f8ff;
+  text-decoration: underline; /* Adds the underscore */
+  padding: 0;
+  transition: transform 0.2s ease;
 }
 
-.action-button:hover img {
+.action-button:hover {
   transform: scale(1.1); /* Slightly enlarge on hover */
+  color: #fffacd; /* Optional: Change color on hover */
 }
+
 
