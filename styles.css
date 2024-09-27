@@ -1,3 +1,4 @@
+/* General body and container styles */
 body, html {
   margin: 0;
   padding: 0;
@@ -13,22 +14,35 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1;
 }
 
+/* Scrolling image */
 #scrolling-image {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
-  width: 100%; /* Ensure the image covers the container */
-  object-fit: cover; /* Adjust the image to cover the container */
+  width: 100%;
+  object-fit: cover;
 }
 
+/* Boat styling */
+#boat {
+  position: absolute;
+  left: -335.59px; /* Off-screen initially */
+  top: 383.81px; /* Based on your coordinates */
+  width: 10%; /* Adjust size if needed */
+  opacity: 0; /* Hidden initially */
+  transition: transform 2s ease, opacity 0.5s ease; /* Smooth animation */
+} 
+ 
 
+/* Text box and input styles */
 #text-box {
   display: flex;
-  flex-direction: column; /* Stack the text and buttons vertically */
-  align-items: center; /* Center align text and buttons */
+  flex-direction: column;
+  align-items: center;
   line-height: 1.15;
 }
 
@@ -41,8 +55,8 @@ body, html {
   width: 25%;
   height: 100px;
   color: #f0f8ff;
-  font-family: 'Roboto', sans-serif; /* Or 'Raleway' if preferred */
-  font-weight: 100; /* 400 is normal, 700 is bold */
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
   letter-spacing: 2px;
   animation: fadeInAnimation ease 5s;
   animation-iteration-count: 1;
@@ -51,17 +65,17 @@ body, html {
 
 @keyframes fadeInAnimation {
   0% {
-      opacity: 0;
+    opacity: 0;
   }
-
   100% {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
+/* Styling for title, intro, and buttons */
 #title {
-  font-size: 40px; /* Include units for font-size */
-  margin-bottom: 20px; 
+  font-size: 40px;
+  margin-bottom: 20px;
   font-weight: 100;
 }
 
@@ -81,32 +95,23 @@ body, html {
 
 #button-container {
   display: flex;
-  justify-content: flex-start; /* Align buttons to the left */
-  position: relative;
-  margin-top: 2px;
-  padding: 0;
-  gap: 25%; /* Space between buttons */
-  font-family: 'HK Concentrate', sans-serif;
-  font-weight: 300; 
-  font-size: 16px;
+  justify-content: flex-start;
+  gap: 25%;
 }
 
 .action-button {
-  letter-spacing: 2px;
   background: none;
   border: none;
   cursor: pointer;
-  font-weight: 300; 
-  font-size: 16px; 
   color: #f0f8ff;
-  text-decoration: underline; /* Adds the underscore */
-  padding: 0;
+  text-decoration: underline;
+  font-family: 'HK Concentrate', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
   transition: transform 0.2s ease;
 }
 
 .action-button:hover {
-  transform: scale(1.1); /* Slightly enlarge on hover */
-  color: #fffacd; /* Optional: Change color on hover */
+  transform: scale(1.1);
+  color: #fffacd;
 }
-
-

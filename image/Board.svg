@@ -88,15 +88,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.24465895"
-     inkscape:cx="2495.3103"
-     inkscape:cy="-100.1394"
+     inkscape:zoom="0.48931789"
+     inkscape:cx="471.06391"
+     inkscape:cy="-150.2091"
      inkscape:window-width="2560"
      inkscape:window-height="1302"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g288" />
+     inkscape:current-layer="g287" />
   <g
      data-testid="Board"
      id="g289">
@@ -168,262 +168,11 @@
              style="display:inline;mix-blend-mode:normal;fill:url(#linearGradient12);fill-opacity:1" />
         </g>
         <g
-           mask="url(#e)"
-           clip-path="url(#d)"
-           data-testid="Tri-Mount2"
-           id="g9">
-          <defs
-             id="defs7">
-            <clipPath
-               id="d"
-               class="mask-clip-path">
-              <polyline
-                 points="0,0 5000,0 5000,899.9999999999998 0,899.9999999999998"
-                 id="polyline4" />
-            </clipPath>
-            <filter
-               id="f"
-               x="0"
-               y="0"
-               width="1"
-               height="1">
-              <feFlood
-                 flood-color="#fff"
-                 result="FloodResult"
-                 id="feFlood4" />
-              <feComposite
-                 in="FloodResult"
-                 in2="SourceGraphic"
-                 operator="in"
-                 result="comp"
-                 id="feComposite4" />
-            </filter>
-            <mask
-               width="5000"
-               maskUnits="userSpaceOnUse"
-               height="900"
-               class="mask-shape"
-               x="0"
-               id="e"
-               data-old-y="0"
-               data-old-width="5000"
-               data-old-x="0"
-               y="0"
-               data-old-height="900">
-              <g
-                 filter="url(#f)"
-                 id="g7">
-                <g
-                   data-testid="BG"
-                   id="g6">
-                  <defs
-                     id="defs6">
-                    <linearGradient
-                       id="g"
-                       x1=".499"
-                       y1="-.128"
-                       x2=".5"
-                       y2="1">
-                      <stop
-                         offset="0"
-                         stop-color="#557470"
-                         id="stop4" />
-                      <stop
-                         offset="1"
-                         stop-color="#5ddbc1"
-                         stop-opacity="0"
-                         id="stop5" />
-                    </linearGradient>
-                    <pattern
-                       patternUnits="userSpaceOnUse"
-                       x="0"
-                       y="0"
-                       width="5000"
-                       height="900"
-                       id="h">
-                      <rect
-                         width="5000"
-                         height="900"
-                         style="fill: rgb(98, 126, 118); fill-opacity: 0;"
-                         id="rect5" />
-                      <rect
-                         width="5000"
-                         height="900"
-                         style="fill: url(&quot;#g&quot;);"
-                         id="rect6" />
-                    </pattern>
-                  </defs>
-                  <path
-                     d="M0 0h5000v900H0V0Z"
-                     fill="url(#h)"
-                     class="fills"
-                     id="path6" />
-                </g>
-              </g>
-            </mask>
-          </defs>
-          <rect
-             rx="0"
-             ry="0"
-             x="850.204"
-             y="542.59"
-             transform="scale(1.04928 .94816) rotate(45 1065.767 798.475)"
-             width="596"
-             height="596"
-             style="fill: rgb(98, 126, 118); fill-opacity: 1;"
-             class="fills"
-             data-testid="Rectangle"
-             id="rect7" />
-          <rect
-             rx="0"
-             ry="0"
-             x="706"
-             y="841"
-             width="885"
-             height="400"
-             style="fill: rgb(177, 178, 181); fill-opacity: 0;"
-             fill="none"
-             class="fills"
-             data-testid="Rectangle"
-             id="rect8" />
-          <rect
-             rx="0"
-             ry="0"
-             x="992.132"
-             y="542.346"
-             transform="matrix(.4721 -.88155 .85 .52677 -28.374 1488.207)"
-             width="521"
-             height="538"
-             style="fill: rgb(127, 147, 131); fill-opacity: 1;"
-             class="fills"
-             data-testid="Mount"
-             id="rect9" />
-        </g>
-        <g
-           mask="url(#j)"
-           clip-path="url(#i)"
-           data-testid="Tri-Mount4"
-           id="g13">
-          <defs
-             id="defs12">
-            <clipPath
-               id="i"
-               class="mask-clip-path">
-              <polyline
-                 points="0,0 5000,0 5000,899.9999999999998 0,899.9999999999998"
-                 id="polyline9" />
-            </clipPath>
-            <filter
-               id="k"
-               x="0"
-               y="0"
-               width="1"
-               height="1">
-              <feFlood
-                 flood-color="#fff"
-                 result="FloodResult"
-                 id="feFlood9" />
-              <feComposite
-                 in="FloodResult"
-                 in2="SourceGraphic"
-                 operator="in"
-                 result="comp"
-                 id="feComposite9" />
-            </filter>
-            <mask
-               width="5000"
-               maskUnits="userSpaceOnUse"
-               height="900"
-               class="mask-shape"
-               x="0"
-               id="j"
-               data-old-y="0"
-               data-old-width="5000"
-               data-old-x="0"
-               y="0"
-               data-old-height="900">
-              <g
-                 filter="url(#k)"
-                 id="g12">
-                <g
-                   data-testid="BG"
-                   id="g11">
-                  <defs
-                     id="defs11">
-                    <linearGradient
-                       id="l"
-                       x1=".499"
-                       y1="-.128"
-                       x2=".5"
-                       y2="1">
-                      <stop
-                         offset="0"
-                         stop-color="#557470"
-                         id="stop9" />
-                      <stop
-                         offset="1"
-                         stop-color="#5ddbc1"
-                         stop-opacity="0"
-                         id="stop10" />
-                    </linearGradient>
-                    <pattern
-                       patternUnits="userSpaceOnUse"
-                       x="0"
-                       y="0"
-                       width="5000"
-                       height="900"
-                       id="m">
-                      <rect
-                         width="5000"
-                         height="900"
-                         style="fill: rgb(98, 126, 118); fill-opacity: 0;"
-                         id="rect10" />
-                      <rect
-                         width="5000"
-                         height="900"
-                         style="fill: url(&quot;#l&quot;);"
-                         id="rect11" />
-                    </pattern>
-                  </defs>
-                  <path
-                     d="M0 0h5000v900H0V0Z"
-                     fill="url(#m)"
-                     class="fills"
-                     id="path11" />
-                </g>
-              </g>
-            </mask>
-          </defs>
-          <path
-             d="m3786.592 233 464.343 449.113-458.593 443.55L3328 676.551 3786.592 233Z"
-             style="fill: rgb(98, 126, 118); fill-opacity: 1;"
-             class="fills"
-             data-testid="Rectangle"
-             id="path12" />
-          <rect
-             rx="0"
-             ry="0"
-             x="3385"
-             y="732"
-             width="816"
-             height="395"
-             style="fill: rgb(177, 178, 181); fill-opacity: 0;"
-             fill="none"
-             class="fills"
-             data-testid="Rectangle"
-             id="rect12" />
-          <path
-             d="m4366 634-215.167 411.656L3570 660.374l216.744-426.771L4366 634Z"
-             style="fill: rgb(127, 147, 131); fill-opacity: 1;"
-             class="fills"
-             data-testid="Mount"
-             id="path13" />
-        </g>
-        <g
            mask="url(#o)"
            clip-path="url(#n)"
            data-testid="Tri-Mount1"
-           id="g18">
+           id="g18"
+           inkscape:label="BG_triMount_1">
           <defs
              id="defs16">
             <clipPath
@@ -514,6 +263,127 @@
               </g>
             </mask>
           </defs>
+          <g
+             mask="url(#e)"
+             clip-path="url(#d)"
+             data-testid="Tri-Mount2"
+             id="g9"
+             inkscape:label="BG_triMount_1_behind">
+            <defs
+               id="defs7">
+              <clipPath
+                 id="d"
+                 class="mask-clip-path">
+                <polyline
+                   points="0,0 5000,0 5000,899.9999999999998 0,899.9999999999998"
+                   id="polyline4" />
+              </clipPath>
+              <filter
+                 id="f"
+                 x="0"
+                 y="0"
+                 width="1"
+                 height="1">
+                <feFlood
+                   flood-color="#fff"
+                   result="FloodResult"
+                   id="feFlood4" />
+                <feComposite
+                   in="FloodResult"
+                   in2="SourceGraphic"
+                   operator="in"
+                   result="comp"
+                   id="feComposite4" />
+              </filter>
+              <mask
+                 width="5000"
+                 maskUnits="userSpaceOnUse"
+                 height="900"
+                 class="mask-shape"
+                 x="0"
+                 id="e"
+                 data-old-y="0"
+                 data-old-width="5000"
+                 data-old-x="0"
+                 y="0"
+                 data-old-height="900">
+                <g
+                   filter="url(#f)"
+                   id="g7">
+                  <g
+                     data-testid="BG"
+                     id="g6">
+                    <defs
+                       id="defs6">
+                      <linearGradient
+                         id="g"
+                         x1=".499"
+                         y1="-.128"
+                         x2=".5"
+                         y2="1">
+                        <stop
+                           offset="0"
+                           stop-color="#557470"
+                           id="stop4" />
+                        <stop
+                           offset="1"
+                           stop-color="#5ddbc1"
+                           stop-opacity="0"
+                           id="stop5" />
+                      </linearGradient>
+                      <pattern
+                         patternUnits="userSpaceOnUse"
+                         x="0"
+                         y="0"
+                         width="5000"
+                         height="900"
+                         id="h">
+                        <rect
+                           width="5000"
+                           height="900"
+                           style="fill: rgb(98, 126, 118); fill-opacity: 0;"
+                           id="rect5" />
+                        <rect
+                           width="5000"
+                           height="900"
+                           style="fill: url(&quot;#g&quot;);"
+                           id="rect6" />
+                      </pattern>
+                    </defs>
+                    <path
+                       d="M0 0h5000v900H0V0Z"
+                       fill="url(#h)"
+                       class="fills"
+                       id="path6" />
+                  </g>
+                </g>
+              </mask>
+            </defs>
+            <rect
+               rx="0"
+               ry="0"
+               x="850.204"
+               y="542.59"
+               transform="scale(1.04928 .94816) rotate(45 1065.767 798.475)"
+               width="596"
+               height="596"
+               style="fill: rgb(98, 126, 118); fill-opacity: 1;"
+               class="fills"
+               data-testid="Rectangle"
+               id="rect7" />
+            <rect
+               rx="0"
+               ry="0"
+               x="992.132"
+               y="542.346"
+               transform="matrix(.4721 -.88155 .85 .52677 -28.374 1488.207)"
+               width="521"
+               height="538"
+               style="fill: rgb(127, 147, 131); fill-opacity: 1;"
+               class="fills"
+               data-testid="Mount"
+               id="rect9" />
+          </g>
           <rect
              rx="0"
              ry="0"
@@ -543,7 +413,8 @@
            mask="url(#t)"
            clip-path="url(#s)"
            data-testid="Tri-Mount3"
-           id="g23">
+           id="g23"
+           inkscape:label="BG_mount2">
           <defs
              id="defs21">
             <clipPath
@@ -634,6 +505,114 @@
               </g>
             </mask>
           </defs>
+          <g
+             mask="url(#j)"
+             clip-path="url(#i)"
+             data-testid="Tri-Mount4"
+             id="g13">
+            <defs
+               id="defs12">
+              <clipPath
+                 id="i"
+                 class="mask-clip-path">
+                <polyline
+                   points="0,0 5000,0 5000,899.9999999999998 0,899.9999999999998"
+                   id="polyline9" />
+              </clipPath>
+              <filter
+                 id="k"
+                 x="0"
+                 y="0"
+                 width="1"
+                 height="1">
+                <feFlood
+                   flood-color="#fff"
+                   result="FloodResult"
+                   id="feFlood9" />
+                <feComposite
+                   in="FloodResult"
+                   in2="SourceGraphic"
+                   operator="in"
+                   result="comp"
+                   id="feComposite9" />
+              </filter>
+              <mask
+                 width="5000"
+                 maskUnits="userSpaceOnUse"
+                 height="900"
+                 class="mask-shape"
+                 x="0"
+                 id="j"
+                 data-old-y="0"
+                 data-old-width="5000"
+                 data-old-x="0"
+                 y="0"
+                 data-old-height="900">
+                <g
+                   filter="url(#k)"
+                   id="g12">
+                  <g
+                     data-testid="BG"
+                     id="g11">
+                    <defs
+                       id="defs11">
+                      <linearGradient
+                         id="l"
+                         x1=".499"
+                         y1="-.128"
+                         x2=".5"
+                         y2="1">
+                        <stop
+                           offset="0"
+                           stop-color="#557470"
+                           id="stop9" />
+                        <stop
+                           offset="1"
+                           stop-color="#5ddbc1"
+                           stop-opacity="0"
+                           id="stop10" />
+                      </linearGradient>
+                      <pattern
+                         patternUnits="userSpaceOnUse"
+                         x="0"
+                         y="0"
+                         width="5000"
+                         height="900"
+                         id="m">
+                        <rect
+                           width="5000"
+                           height="900"
+                           style="fill: rgb(98, 126, 118); fill-opacity: 0;"
+                           id="rect10" />
+                        <rect
+                           width="5000"
+                           height="900"
+                           style="fill: url(&quot;#l&quot;);"
+                           id="rect11" />
+                      </pattern>
+                    </defs>
+                    <path
+                       d="M0 0h5000v900H0V0Z"
+                       fill="url(#m)"
+                       class="fills"
+                       id="path11" />
+                  </g>
+                </g>
+              </mask>
+            </defs>
+            <path
+               d="m3786.592 233 464.343 449.113-458.593 443.55L3328 676.551 3786.592 233Z"
+               style="fill: rgb(98, 126, 118); fill-opacity: 1;"
+               class="fills"
+               data-testid="Rectangle"
+               id="path12" />
+            <path
+               d="m4366 634-215.167 411.656L3570 660.374l216.744-426.771L4366 634Z"
+               style="fill: rgb(127, 147, 131); fill-opacity: 1;"
+               class="fills"
+               data-testid="Mount"
+               id="path13" />
+          </g>
           <rect
              rx="0"
              ry="0"
