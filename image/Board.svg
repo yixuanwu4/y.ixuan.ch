@@ -9,10 +9,76 @@
    inkscape:version="1.3.2 (091e20e, 2023-11-25)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
-     id="defs289" />
+     id="defs289">
+    <linearGradient
+       id="linearGradient21"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#d7eae2;stop-opacity:0.18500001;"
+         offset="0"
+         id="stop21" />
+      <stop
+         style="stop-color:#d7eae2;stop-opacity:0;"
+         offset="1"
+         id="stop22" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient17"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#8bb0b6;stop-opacity:1;"
+         offset="0"
+         id="stop17" />
+      <stop
+         style="stop-color:#9dbcc2;stop-opacity:1;"
+         offset="1"
+         id="stop20" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient11"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#557470;stop-opacity:1;"
+         offset="0.06926045"
+         id="stop11" />
+      <stop
+         style="stop-color:#8dae7c;stop-opacity:0.57861638;"
+         offset="1"
+         id="stop12" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient11"
+       id="linearGradient12"
+       x1="2673.4104"
+       y1="0"
+       x2="2684.9712"
+       y2="1054.9133"
+       gradientUnits="userSpaceOnUse"
+       spreadMethod="pad" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient17"
+       id="linearGradient20"
+       x1="2162.1936"
+       y1="899.21094"
+       x2="2162.1936"
+       y2="568.13782"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient21"
+       id="linearGradient22"
+       x1="934.61802"
+       y1="178.892"
+       x2="944.62002"
+       y2="178.892"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
   <sodipodi:namedview
      id="namedview289"
      pagecolor="#ffffff"
@@ -22,15 +88,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="1.384"
-     inkscape:cx="1633.6705"
-     inkscape:cy="543.71387"
-     inkscape:window-width="5120"
+     inkscape:zoom="0.24465895"
+     inkscape:cx="2495.3103"
+     inkscape:cy="-100.1394"
+     inkscape:window-width="2560"
      inkscape:window-height="1302"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g287" />
+     inkscape:current-layer="g288" />
   <g
      data-testid="Board"
      id="g289">
@@ -50,21 +116,6 @@
     <g
        clip-path="url(#a)"
        id="g288">
-      <g
-         class="fills"
-         id="g2"
-         style="display:none">
-        <rect
-           width="5000"
-           height="900"
-           class="frame-background"
-           style="display:none;mix-blend-mode:normal;fill:#ffffff;fill-opacity:1"
-           ry="0"
-           rx="0"
-           id="rect2"
-           x="0"
-           y="0" />
-      </g>
       <g
          class="frame-children"
          id="g287">
@@ -110,10 +161,11 @@
             </pattern>
           </defs>
           <path
-             d="M0 0h5000v900H0V0Z"
+             d="M 0,0 H 5000 V 900 H 0 Z"
              fill="url(#c)"
              class="fills"
-             id="path4" />
+             id="path4"
+             style="display:inline;mix-blend-mode:normal;fill:url(#linearGradient12);fill-opacity:1" />
         </g>
         <g
            mask="url(#e)"
@@ -477,24 +529,12 @@
           <rect
              rx="0"
              ry="0"
-             x="958"
-             y="820"
-             width="990.735"
-             height="457"
-             style="fill: rgb(177, 178, 181); fill-opacity: 0;"
-             fill="none"
-             class="fills"
-             data-testid="Rectangle"
-             id="rect17" />
-          <rect
-             rx="0"
-             ry="0"
              x="1273.332"
-             y="482.529"
-             transform="matrix(.46462 -.88551 .84513 .53457 176.593 1755.715)"
+             y="482.52899"
+             transform="matrix(0.46462,-0.88551,0.84513,0.53457,176.593,1755.715)"
              width="593"
              height="606"
-             style="fill: rgb(127, 147, 131); fill-opacity: 1;"
+             style="display:inline;fill:#7f9383;fill-opacity:1"
              class="fills"
              data-testid="Mount"
              id="rect18" />
@@ -598,35 +638,23 @@
              rx="0"
              ry="0"
              x="3172.033"
-             y="477.774"
-             transform="scale(1.01835 .98131) rotate(45 3451.432 738.812)"
+             y="477.77399"
+             transform="matrix(0.72008219,0.69389096,-0.72008219,0.69389096,1561.4564,-2182.5688)"
              width="659"
              height="659"
-             style="fill: rgb(98, 126, 118); fill-opacity: 1;"
+             style="display:inline;fill:#627e76;fill-opacity:1"
              class="fills"
              data-testid="Rectangle"
              id="rect21" />
           <rect
              rx="0"
              ry="0"
-             x="3027"
-             y="807"
-             width="948"
-             height="457"
-             style="fill: rgb(177, 178, 181); fill-opacity: 0;"
-             fill="none"
-             class="fills"
-             data-testid="Rectangle"
-             id="rect22" />
-          <rect
-             rx="0"
-             ry="0"
-             x="3319.216"
-             y="478.829"
-             transform="matrix(.44877 -.89365 .83427 .55135 1346.952 3575.664)"
+             x="3319.2161"
+             y="478.82901"
+             transform="matrix(0.44877,-0.89365,0.83427,0.55135,1346.952,3575.664)"
              width="588"
              height="588"
-             style="fill: rgb(127, 147, 131); fill-opacity: 1;"
+             style="display:inline;fill:#7f9383;fill-opacity:1"
              class="fills"
              data-testid="Mount"
              id="rect23" />
@@ -837,57 +865,6 @@
           </g>
         </g>
         <g
-           data-testid="Rectangle"
-           id="g34">
-          <defs
-             id="defs33">
-            <linearGradient
-               id="H"
-               x1=".5"
-               y1="0"
-               x2=".5"
-               y2="1">
-              <stop
-                 offset="0"
-                 stop-color="#52716e"
-                 stop-opacity=".6"
-                 id="stop31" />
-              <stop
-                 offset="1"
-                 stop-color="#52716e"
-                 stop-opacity="0"
-                 id="stop32" />
-            </linearGradient>
-            <pattern
-               patternUnits="userSpaceOnUse"
-               x="0"
-               y="646"
-               width="5000"
-               height="255"
-               id="I">
-              <rect
-                 width="5000"
-                 height="255"
-                 style="fill: url(&quot;#H&quot;);"
-                 id="rect32" />
-              <rect
-                 width="5000"
-                 height="255"
-                 style="fill: rgb(157, 188, 194); fill-opacity: 1;"
-                 id="rect33" />
-            </pattern>
-          </defs>
-          <rect
-             rx="0"
-             ry="0"
-             y="646"
-             width="5000"
-             height="255"
-             fill="url(#I)"
-             class="fills"
-             id="rect34" />
-        </g>
-        <g
            data-testid="bg_mount1"
            id="g35"
            transform="matrix(1.0774154,0,0,1.3176707,-773.81813,-211.3941)"
@@ -974,7 +951,8 @@
              fill="url(#K)"
              class="fills"
              id="rect38"
-             x="1.0218306" />
+             x="1.0218306"
+             style="fill:url(#linearGradient20);fill-opacity:1" />
         </g>
         <g
            data-testid="Bridge_Shadows"
@@ -3779,7 +3757,7 @@
                cy="178.892"
                rx="5.001"
                ry="4.445"
-               style="fill: rgb(215, 234, 226); fill-opacity: 0.185;"
+               style="fill:url(#linearGradient22);fill-opacity:0.185"
                class="fills"
                data-testid="Ellipse"
                id="ellipse257" />
@@ -3788,10 +3766,39 @@
                cy="135.947"
                rx="5.001"
                ry="4.445"
-               style="fill: rgb(215, 234, 226); fill-opacity: 0.185;"
+               style="fill:rgb(215, 234, 226);fill-opacity:0.185"
                class="fills"
                data-testid="Ellipse"
-               id="ellipse258" />
+               id="ellipse23" />
+            <ellipse
+               cx="884.35284"
+               cy="-61.353371"
+               rx="1.9355081"
+               ry="2.707814"
+               style="fill:#d7eae2;fill-opacity:0.185;stroke-width:0.48556"
+               class="fills"
+               data-testid="Ellipse"
+               id="ellipse258"
+               transform="scale(1,-1)" />
+            <ellipse
+               cx="48.890842"
+               cy="152.0602"
+               rx="4.5009999"
+               ry="3.951"
+               style="fill:#d7eae2;fill-opacity:0.185"
+               class="fills"
+               data-testid="Ellipse"
+               id="ellipse25" />
+            <ellipse
+               cx="952.81549"
+               cy="-181.92938"
+               rx="1.9355081"
+               ry="2.707814"
+               style="fill:#d7eae2;fill-opacity:0.185;stroke-width:0.48556"
+               class="fills"
+               data-testid="Ellipse"
+               id="ellipse24"
+               transform="scale(1,-1)" />
             <g
                data-testid="Stars"
                id="g284">
@@ -4030,6 +4037,88 @@
                  data-testid="Ellipse"
                  id="ellipse284" />
             </g>
+            <ellipse
+               cx="506.27551"
+               cy="-205.43149"
+               rx="1.9355081"
+               ry="2.707814"
+               style="fill:#d7eae2;fill-opacity:0.185;stroke-width:0.48556"
+               class="fills"
+               data-testid="Ellipse"
+               id="ellipse26"
+               transform="scale(1,-1)" />
+            <ellipse
+               cx="1027.958"
+               cy="200.90036"
+               rx="4"
+               ry="3.457"
+               style="fill:#d7eae2;fill-opacity:0.185"
+               class="fills"
+               data-testid="Ellipse"
+               id="ellipse27" />
+            <ellipse
+               cx="630.46588"
+               cy="54.778584"
+               rx="4"
+               ry="3.457"
+               style="fill:#d7eae2;fill-opacity:0.185"
+               class="fills"
+               data-testid="Ellipse"
+               id="ellipse28" />
+            <ellipse
+               cx="440.4054"
+               cy="154.91798"
+               rx="4"
+               ry="3.457"
+               style="fill:#d7eae2;fill-opacity:0.185"
+               class="fills"
+               data-testid="Ellipse"
+               id="ellipse29" />
+            <ellipse
+               cx="1554.2551"
+               cy="134.49983"
+               rx="2.5"
+               ry="1.976"
+               style="fill:#d7eae2;fill-opacity:0.185"
+               class="fills"
+               data-testid="Ellipse"
+               id="ellipse30" />
+            <ellipse
+               cx="1941.0374"
+               cy="45.017712"
+               rx="6.5009999"
+               ry="5.927"
+               style="fill:#d7eae2;fill-opacity:0.185"
+               class="fills"
+               data-testid="Ellipse"
+               id="ellipse31" />
+            <ellipse
+               cx="1601.2593"
+               cy="361.34622"
+               rx="2.5"
+               ry="1.976"
+               style="fill:#d7eae2;fill-opacity:0.185"
+               class="fills"
+               data-testid="Ellipse"
+               id="ellipse32" />
+            <ellipse
+               cx="1166.9813"
+               cy="393.02298"
+               rx="2.5"
+               ry="1.976"
+               style="fill:#d7eae2;fill-opacity:0.185"
+               class="fills"
+               data-testid="Ellipse"
+               id="ellipse33" />
+            <ellipse
+               cx="1017.7941"
+               cy="312.29837"
+               rx="2.5"
+               ry="1.976"
+               style="fill:#d7eae2;fill-opacity:0.185"
+               class="fills"
+               data-testid="Ellipse"
+               id="ellipse34" />
           </g>
         </g>
       </g>
