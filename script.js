@@ -72,4 +72,9 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         image.addEventListener('load', onImageLoadOrResize);
     }
+    
+    window.onload = function() {
+        const textInput = document.getElementById('text-input');
+        textInput.classList.add('visible'); // Add the class to trigger fade-in
+    };
 });

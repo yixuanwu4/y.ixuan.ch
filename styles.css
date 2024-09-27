@@ -24,10 +24,12 @@ body, html {
   object-fit: cover; /* Adjust the image to cover the container */
 }
 
+
 #text-box {
   display: flex;
   flex-direction: column; /* Stack the text and buttons vertically */
   align-items: center; /* Center align text and buttons */
+  line-height: 1.15;
 }
 
 #text-input {
@@ -36,26 +38,45 @@ body, html {
   left: 50%;
   transform: translate(-50%, -50%);
   transition: opacity 0.3s ease;
-  width: 12%;
+  width: 25%;
   height: 100px;
   color: #f0f8ff;
   font-family: 'Roboto', sans-serif; /* Or 'Raleway' if preferred */
   font-weight: 100; /* 400 is normal, 700 is bold */
+  letter-spacing: 2px;
+  animation: fadeInAnimation ease 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
 }
 
 #title {
-  font-size: 50px; /* Include units for font-size */
-  margin-bottom: 10px; 
+  font-size: 40px; /* Include units for font-size */
+  margin-bottom: 20px; 
+  font-weight: 100;
 }
 
 #brief_intro, #brief_intro_1 {
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 20px;
 }
 
 #choices {
-  font-size: 30px;
+  font-size: 16px;
+  line-height: 1.2;
   margin-bottom: 20px;
+  font-family: 'HK Concentrate', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 #button-container {
@@ -65,15 +86,18 @@ body, html {
   margin-top: 2px;
   padding: 0;
   gap: 25%; /* Space between buttons */
+  font-family: 'HK Concentrate', sans-serif;
+  font-weight: 300; 
+  font-size: 16px;
 }
 
 .action-button {
+  letter-spacing: 2px;
   background: none;
   border: none;
   cursor: pointer;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300; /* Adjust this to match your desired font weight */
-  font-size: 25px; /* Match the font size to your text */
+  font-weight: 300; 
+  font-size: 16px; 
   color: #f0f8ff;
   text-decoration: underline; /* Adds the underscore */
   padding: 0;
