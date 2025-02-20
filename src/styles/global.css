@@ -115,9 +115,12 @@ video {
 }
 
 .social-icons img {
-    width: 55px;        
-    height: 55px;
-    opacity: 0;
+    pointer-events: auto;
+    z-index: 10;
+    position: relative;
+    display: inline-block; /* Ensures proper clickable area */
+    transition: transform 0.3s ease;
+    will-change: transform; /* Optimizes rendering */
     /* transition: transform 0.2s ease-in-out; */
 }
 
@@ -131,8 +134,8 @@ video {
     position: relative;
     align-items: center;
     justify-content: space-between;
-    padding: 5vw;
-    min-height: 100vh;
+    margin: 5vw;
+    min-height: 80vh;
 }
 
 .about-text {
