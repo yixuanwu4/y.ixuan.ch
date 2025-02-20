@@ -1,0 +1,31 @@
+---
+export interface SkillProps {
+  name: string;
+  icon: string;
+}
+
+const { name, icon } = Astro.props;
+---
+<div class="skill">
+  <img src={icon} alt={name} class="skill-icon" />
+  <p class="skill-name">{name}</p>
+</div>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+  .skill {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    top:0;
+  }
+
+  .skill-name {
+    font-size: 1vw;
+    margin-top: 5px;
+    font-family: Roboto;
+    font-weight: 500;
+  }
+</style>

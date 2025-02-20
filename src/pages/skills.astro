@@ -1,0 +1,17 @@
+---
+import { skills } from "../data/skills.ts";
+import SkillCard from "../components/SkillCard.astro";
+---
+<div class="page-skills" id="skills">
+    <p class="skills-title animate-fade-in">Skills</p>
+    {skills.map((category) => (
+    <section>
+        <p class="skills-category">{category.category}</p>
+        <div class="skills-grid">
+        {category.items.map((skill) => (
+            <SkillCard name={skill.name} icon={skill.icon} />
+        ))}
+        </div>
+    </section>
+    ))}
+</div>
