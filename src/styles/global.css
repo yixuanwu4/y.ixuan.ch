@@ -1,57 +1,76 @@
+:root {
+  --color-page-bg: #fbfbfb;
+  --color-text-default: #052204;
+
+  --font-family-logo: "Saira Stencil One", sans-serif;
+  --font-family-intro: "Montserrat", sans-serif;
+  --font-family-nav: "Varela", sans-serif;
+
+  --height-default: 100vh;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-page-bg);
+}
+
 main {
-    min-height: 100vh;
+  min-height: var(--height-default);
 }
 
 /* Logo */
 .main-logo {
-    font-family: 'Saira Stencil One', sans-serif;
-    font-weight: normal;
-    font-size: 4vh;
-    color: black;
-    text-transform: uppercase;
-    position: fixed;
-    top: 2vh;
-    left: 10vw;
-    transform: translateX(-50%);
-    z-index: 1000;
-    text-decoration: none;
+  font-family: var(--font-family-logo);
+  font-weight: normal;
+  font-size: 4vh;
+  color: var(--color-text-default);
+  text-transform: uppercase;
+  position: fixed;
+  top: 2vh;
+  left: 10vw;
+  transform: translateX(-50%);
+  z-index: 1000;
+  text-decoration: none;
 }
 
 /* Navigation Bar */
-.nav-links{
-    font-family: 'Varela', sans-serif;
-    font-weight: normal;
-    font-size: 2vh;
-    position: fixed;
-    top: 2vh;
-    right: 10vw;
-    z-index: 1000;
-    text-decoration: none;
-    margin-top: 1vh;
+.nav-links {
+  font-family: var(--font-family-nav);
+  color: var(--color-text-default);
+  font-weight: normal;
+  font-size: 2vh;
+  position: fixed;
+  top: 2vh;
+  right: 10vw;
+  z-index: 1000;
+  text-decoration: none;
+  padding-top: 1vh;
 }
 
 .nav-links a {
-    margin-right: 2vw;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: normal;
-    color: black;
+  margin-right: 2vw;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: var(--color-text-default);
 }
 
-
 /* Intro on the index page*/
+
 .intro-content-frame {
   position: relative;
+  min-height: var(--height-default);
+  font-family: var(--font-family-intro);
   left: 50%;
   width: 33vw; /* 1/3 of the window width */
   top: 10vh;
-  bottom: 2vh; /* Adjust this based on your nav bar height */
   transform: translateX(-50%);
   flex-direction: column;
   justify-content: center;
-  align-items: center; /* Aligns content to the top */
+  align-items: center;
   text-align: center;
-  color: #008000;
+  color: var(--color-text-default);
   margin-bottom: 6vh;
 }
 
@@ -62,7 +81,7 @@ main {
 }
 
 video {
-  -moz-appearance: none; 
+  -moz-appearance: none;
   align-items: center;
   margin: 0;
   padding: 0;
@@ -70,172 +89,169 @@ video {
 }
 
 .my-intro-01 {
-    font-family: 'Shrikhand', cursive; 
-    font-weight: 400; 
-    font-size: 2vw;
-    font-style: normal; 
-    letter-spacing: normal; 
-    text-transform: none; 
-    width: 100%;
-    text-align: center;
-    line-height: 1;
+  margin-top: 5vh;
+  color: var(--color-text-default);
+  font-weight: 600;
+  font-size: 2.5vw;
+  letter-spacing: normal;
+  text-transform: none;
+  width: 100%;
+  text-align: center;
+  line-height: 1;
 }
 
-.my-intro-01:nth-of-type(2) { 
-  text-align: left; 
+.my-intro-01:nth-of-type(2) {
+  text-align: left;
   padding-left: 1vw;
 }
 
-.my-intro-01:nth-of-type(3) { 
-  text-align: right; 
+.my-intro-01:nth-of-type(3) {
+  text-align: right;
   padding-right: 1vw;
 }
 
-
 .intro-content-frame-02 {
-    position: relative;
-    margin-top: 5vh;
-    bottom: 4vh;
-    width: 100%; 
-    flex-direction: column;
-    font-family: 'Varela', sans-serif;
-    font-size: 1.2vw;
-    color: black;
-  }
+  position: relative;
+  margin-top: 5vh;
+  bottom: 4vh;
+  width: 100%;
+  flex-direction: column;
+  font-size: 1.2vw;
+  color: var(--color-text-default);
+}
 
 /* Contact icons*/
 .social-icons {
-    position: relative;  /* Keeps it relative to the first page */
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 1vw;            /* Space between icons */
-    justify-content: center;
-    align-items: center;
+  position: relative; 
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1vw; 
+  justify-content: center;
+  align-items: center;
 }
 
 .social-icons img {
-    pointer-events: auto;
-    z-index: 10;
-    position: relative;
-    display: inline-block; /* Ensures proper clickable area */
-    transition: transform 0.3s ease;
-    will-change: transform; /* Optimizes rendering */
-    /* transition: transform 0.2s ease-in-out; */
+  pointer-events: auto;
+  z-index: 10;
+  position: relative;
+  display: inline-block; /* Ensures proper clickable area */
+  transition: transform 0.3s ease;
+  will-change: transform; /* Optimizes rendering */
+  /* transition: transform 0.2s ease-in-out; */
 }
 
 .social-icons img:hover {
-    transform: scale(1.2); /* Slight zoom effect on hover */
+  transform: scale(1.2); /* Slight zoom effect on hover */
 }
 
 /* About page */
 .about-container {
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: space-between;
-    margin: 5vw;
-    min-height: 80vh;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-family-intro);
+  margin: 5vw;
+  min-height: var(--height-default);
+  color: var(--color-text-default);
+  gap: 2vw;
 }
 
 .about-text {
-    position: absolute;
-    top: 20vh;
-    left: 15vw;
-    width: 40%;
-    font-family: 'Varela', sans-serif;
-    font-size: 1.0vw;
-    color: black;
+  position: absolute;
+  top: 20vh;
+  left: 15vw;
+  width: 40%;
+  font-size: 1vw;
 }
 
-.about-title{
-    font-family: "Roboto", serif;
-    font-size: 2vw;
-    color: black;
-    font-weight: 1000;
-    text-align: center;
+.about-title {
+  font-size: 2vw;
+  font-weight: bold;
+  text-align: center;
 }
 
 .about-image {
-    top: 22%;
-    position: absolute;
-    right: 15vw;
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  top: 22%;
+  position: absolute;
+  right: 15vw;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .about-image img {
-    top: 20%;
-    width: 70%;
-    transform: rotate(10deg);
-    border-radius: 10px; /* Optional: Makes the image corners rounded */
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2); /* Optional: Adds shadow effect */
+  top: 20%;
+  width: 70%;
+  transform: rotate(10deg);
+  border-radius: 10px; /* Optional: Makes the image corners rounded */
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2); /* Optional: Adds shadow effect */
 }
 
 /* Skills Page */
 
-.page-skills{
-    padding-top: 8vh;
-    min-height: 100vh;
-    align-items: center;
+.page-skills {
+  padding-top: 8vh;
+  font-family: var(--font-family-intro);
+  min-height: var(--height-default);
+  align-items: center;
 }
 .skills-title {
-    position: relative;
-    font-family: "Roboto", serif;
-    font-size: 2vw;
-    color: black;
-    font-weight: 1000;
-    text-align: center;
+  position: relative;
+  font-size: 2vw;
+  color: var(--color-text-default);
+  font-weight: bold;
+  text-align: center;
 }
 
 .skills-category {
-    position: relative;
-    font-family: "Roboto", serif;
-    font-size: 1.5vw;
-    color: black;
-    font-weight: 1000;
-    text-align: center;
+  position: relative;
+  font-size: 1.5vw;
+  color: var(--color-text-default);
+  font-weight: 400;
+  text-align: center;
 }
 
 .skills-grid {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 6vw;
-  }
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6vw;
+  margin-bottom: 4vh;
+}
 
 /* Contact Page */
-.contact{
-    padding-top: 8vh;
-    min-height: 50vh;
-    align-items: center;
-    margin-bottom: 1vh;
-    bottom: 1vh;
+.contact {
+  padding-top: 8vh;
+  min-height: 50vh;
+  align-items: center;
+  margin-bottom: 1vh;
+  bottom: 1vh;
 }
 
-.contact-title{
-    position: relative;
-    font-family: "Roboto", serif;
-    font-size: 2vw;
-    color: black;
-    font-weight: 1000;
-    text-align: center;
+.contact-title {
+  position: relative;
+  font-family: "Roboto", serif;
+  font-size: 2vw;
+  color: var(--color-text-default);
+  font-weight: 1000;
+  text-align: center;
 }
 
-.contact-text{
-    position: relative;
-    margin-top: 0vh;
-    text-align: center;
-    width: 100%; 
-    font-family: 'Varela', sans-serif;
-    font-size: 1.3vw;
-    color: black;
+.contact-text {
+  position: relative;
+  margin-top: 0vh;
+  text-align: center;
+  width: 100%;
+  font-family: "Varela", sans-serif;
+  font-size: 1.3vw;
+  color: var(--color-text-default);
 }
 
 /* 🏃 Smooth Scrolling */
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }

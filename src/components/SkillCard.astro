@@ -10,20 +10,3 @@ const { name, icon } = Astro.props;
   <img src={icon} alt={name} class="skill-icon" />
   <p class="skill-name">{name}</p>
 </div>
-
-<style>
-  .skill {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-    top:0;
-  }
-
-  .skill-name {
-    font-size: 1vw;
-    margin-top: 5px;
-    font-family: Roboto;
-    font-weight: 500;
-  }
-</style>
