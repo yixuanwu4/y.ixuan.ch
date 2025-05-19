@@ -1,0 +1,76 @@
+---
+import ContactIcons from "../components/Contact-icons.astro";
+---
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-family-intro);
+    color: var(--color-text-default);
+  }
+
+  video {
+    -moz-appearance: none;
+    margin: 0;
+    padding: 0;
+    /* background-color: transparent !important; */
+    width: 100%;
+    max-height: var(--height-video);
+  }
+
+  .intro {
+    color: var(--color-text-default);
+    font-weight: var(--font-weight-semi-bold);
+    font-size: var(--font-size-xxl);
+    letter-spacing: normal;
+    text-transform: none;
+    width: 100%;
+    text-align: center;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  /* .intro:nth-of-type(2) {
+    text-align: left;
+    padding-left: 1vw;
+  }
+
+  .intro:nth-of-type(3) {
+    text-align: right;
+    padding-right: 1vw;
+  } */
+
+  .bio {
+    margin: 0, var(--spacing-sm);
+    text-align: center;
+    width: 100%;
+    font-size: var(--font-size-lg);
+    color: var(--color-text-default);
+  }
+</style>
+<script>
+  import "../scripts/videoloop.js";
+  import "../scripts/animation.js";
+</script>
+
+<section>
+  <div>
+    <p class="intro animate-fade-in">Hi! I am Yixuan 👋</p>
+    <video
+      class="animate-fade-in"
+      id="looping-video"
+      autoplay
+      muted
+      playsinline
+    >
+      <source src="/20250212.mp4" type="video/mp4" />
+    </video>
+    <p class="intro animate-fade-in">Web Developer 👩🏻‍💻</p>
+    <p class="intro animate-fade-in">Data Analyst 📊</p>
+    <p class="intro animate-fade-in">Designer 👩🏻‍🎨</p>
+  </div>
+  <div class="bio animate-fade-in">
+    <p>Former NLP researcher transitioning to full-stack development. 👩🏻‍💻</p>
+  </div>
+  <ContactIcons />
+</section>
