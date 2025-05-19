@@ -53,22 +53,6 @@ main>section {
 
 }
 
-
-/* Logo */
-.main-logo {
-  font-family: var(--font-family-logo);
-  font-weight: normal;
-  font-size: var(--font-size-xxxl);
-  color: var(--color-text-default);
-  text-transform: uppercase;
-  position: fixed;
-  top: 2vh;
-  left: 10vw;
-  transform: translateX(-50%);
-  z-index: 1000;
-  text-decoration: none;
-}
-
 /* Intro on the index page*/
 
 .intro-content-frame {
