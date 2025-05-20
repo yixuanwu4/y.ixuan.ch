@@ -65,35 +65,6 @@ section {
   height: var(--height-screen);
 } 
 
-
-/* Contact Page */
-.contact {
-  padding-top: 8vh;
-  min-height: 50vh;
-  align-items: center;
-  margin-bottom: 1vh;
-  bottom: 1vh;
-}
-
-.contact-title {
-  position: relative;
-  font-family: "Roboto", serif;
-  font-size: 2vw;
-  color: var(--color-text-default);
-  font-weight: 1000;
-  text-align: center;
-}
-
-.contact-text {
-  position: relative;
-  margin-top: 0vh;
-  text-align: center;
-  width: 100%;
-  font-family: "Varela", sans-serif;
-  font-size: 1.3vw;
-  color: var(--color-text-default);
-}
-
 html {
   scroll-behavior: smooth;
 }

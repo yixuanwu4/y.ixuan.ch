@@ -12,21 +12,19 @@ import SkillCard from "../components/SkillCard.astro";
     justify-content: center;
     align-items: center;
     font-family: var(--font-family-intro);
+    color: var(--color-text-default);
   }
   .skills-title {
     position: relative;
     font-size: var(--font-size-xxl);
-    color: var(--color-text-default);
     font-weight: bold;
-    margin: var(--spacing-md);
   }
-
   .skills-category {
     position: relative;
     font-size: var(--font-size-xl);
-    color: var(--color-text-default);
     font-weight: var(--font-weight-medium);
     text-align: center;
+    margin-top: 0;
   }
 
   .skills-grid {
@@ -34,6 +32,7 @@ import SkillCard from "../components/SkillCard.astro";
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    font-size: var(--font-size-md);
     gap: var(--spacing-xl);
     margin-bottom: var(--spacing-md);
   }
