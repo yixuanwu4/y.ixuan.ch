@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (entry.isIntersecting) {
         if (target.classList.contains("animate-fade-in")) {
-          fadeInElements.push(target); // Collect elements for stagger animation
+          fadeInElements.push(target);
         } else if (target.classList.contains("skills-category")) {
           animate(target, { opacity: [0, 1], y: [20, 0] }, { duration: 0.8 });
         } else if (target.classList.contains("skills-grid")) {

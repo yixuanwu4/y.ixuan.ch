@@ -2,16 +2,54 @@
 import { skills } from "../data/skills.ts";
 import SkillCard from "../components/SkillCard.astro";
 ---
-<div class="page-skills" id="skills">
-    <p class="skills-title animate-fade-in">Skills</p>
-    {skills.map((category) => (
-    <section>
+
+<style>
+  .page-skills {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-family-intro);
+    color: var(--color-text-default);
+  }
+  .skills-title {
+    position: relative;
+    font-size: var(--font-size-xxl);
+    font-weight: bold;
+  }
+  .skills-category {
+    position: relative;
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-medium);
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .skills-grid {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: var(--font-size-md);
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
+  }
+</style>
+
+<section class="page-skills" id="skills">
+  <p class="skills-title animate-fade-in">Skills</p>
+  {
+    skills.map((category) => (
+      <div>
         <p class="skills-category">{category.category}</p>
         <div class="skills-grid">
-        {category.items.map((skill) => (
+          {category.items.map((skill) => (
             <SkillCard name={skill.name} icon={skill.icon} />
-        ))}
+          ))}
         </div>
-    </section>
-    ))}
-</div>
+      </div>
+    ))
+  }
+</section>

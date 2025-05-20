@@ -1,0 +1,82 @@
+---
+
+---
+
+<style>
+  header {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 100;
+    backdrop-filter: blur(1px);
+    background-color: transparent;
+    background-image: linear-gradient(
+      to bottom,
+      var(--color-page-bg) 80%,
+      transparent
+    );
+  }
+
+  .header {
+    display: flex;
+    color: var(--color-text-default);
+    justify-content: space-between;
+    margin: var(--spacing-lg);
+    gap: 50rem;
+    padding: 0;
+  }
+
+  .logo {
+    font-family: var(--font-family-logo);
+    font-size: var(--font-size-xxxl);
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+  }
+
+  nav li {
+    align-items: right;
+    list-style: none;
+  }
+
+  li a {
+    display: flex;
+    font-weight: var(--font-weight-semi-bold);
+    text-decoration: none;
+    color: var(--color-text-default);
+    font-family: var(--font-family-nav);
+    font-size: var(--font-size-lg);
+  }
+</style>
+
+<header>
+  <div class="header">
+    <div class="logo">YWU</div>
+    <nav>
+      <ul>
+        <li>
+          <a href="#about">About</a>
+        </li>
+        <li>
+          <a href="#skills">Skills</a>
+        </li>
+        <li>
+          <a href="#Blog">Blog</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

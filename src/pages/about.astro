@@ -1,19 +1,76 @@
 ---
-const pageTitle = "About Me";
+const title = "About Me";
 ---
 
-<section id="about" class="about-container">
+<style>
+  section {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-family-intro);
+    color: var(--color-text-default);
+  }
+
+  .about-container {
+    display: flex;
+    align-items: center;
+    color: var(--color-text-default);
+    margin: 0 var(--spacing-xl);
+  }
+
+  .about-title {
+    font-size: var(--font-size-xxl);
+    font-weight: bold;
+  }
+
+  .about-text {
+    width: 50%;
+    font-size: var(--font-size-md);
+    text-align: justify;
+    padding: 0 var(--spacing-lg);
+    margin-top: 0;
+  }
+
+  .about-text p{
+    margin: 0;
+  }
+
+  .about-image {
+    right: var(--spacing-lg);
+    width: 50%;
+  }
+
+  .about-image img {
+    margin-top: var(--spacing-xl);
+    width: 50%;
+    transform: rotate(10deg);
+  }
+</style>
+
+<section id="about">
+  <p class="about-title">{title}</p>
+  <div class="about-container">
     <div class="about-text animate-fade-in">
-    <p class="about-title">About Me</p>
-    <p>
-        Hi, I'm Yixuan. Born in China 🇨🇳, I've lived and studied in the UK 🇬🇧 and Germany 🇩🇪, and now I'm based in Zurich, Switzerland 🇨🇭. I'm passionate about technology—from Natural Language Processing to web development and 3D modeling. I've taught myself tools like Blender, Astro, and Three.js, and I'm always excited to learn more. <br><br>
-
-        When I'm not coding, I love traveling 🛥️, cycling 🚴🏻‍♀️, playing badminton 🏸, and catching Pokémons :P I enjoy meeting new people, exploring new places, and taking on challenges that push me to grow. For me, life's all about turning “I can't” into “I did.” ✨ <br><br>
-
-        Let's connect and create something amazing together!
-    </p>
+      <p>
+        Hi, I'm Yixuan. <br /><br />
+        Born in China 🇨🇳, I've studied in the UK 🇬🇧 and Germany 🇩🇪, and now I'm based
+        in Zurich, Switzerland 🇨🇭. I'm into all things tech—from Natural Language
+        Processing to web development and 3D modeling. I've taught myself tools like
+        Blender, Astro, and Three.js, and I'm always experimenting, breaking things,
+        and figuring out how to put them back together (better). <br /><br />
+        Outside the screen, you'll probably find me traveling 🛥️, cycling 🚴🏻‍♀️, playing
+        badminton 🏸, or out hunting Pokémons :P I love exploring—both the world
+        around me and the things I don't know (yet).<br /><br />
+        Right now, I'm focused on becoming a better developer. I've been documenting
+        my journey as I go, hoping that my learning process might help others starting
+        out too. <br /><br />
+      </p>
     </div>
     <div class="about-image animate-fade-in">
-    <img src="/me.jpg" alt="About Me Image" />
+      <img src="/me.jpg" alt="About Me Image" />
     </div>
+  </div>
 </section>

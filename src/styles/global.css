@@ -1,241 +1,71 @@
-main {
-    min-height: 100vh;
+:root {
+  --color-page-bg: #fbfbfb;
+  --color-text-default: #052204;
+
+  --font-family-logo: "Saira Stencil One", sans-serif;
+  --font-family-intro: "Montserrat", sans-serif;
+  --font-family-nav: "Varela", sans-serif;
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-xxl: 2rem;
+  --font-size-xxxl: 3rem;
+
+  --font-weight-thin: 100;
+  --font-weight-extra-light: 200;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+  --font-weight-black: 900;
+
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+  --spacing-xxl: 8rem;
+
+  --height-xs: 1rem;
+  --height-sm: 2rem;
+  --height-md: 3rem;
+  --height-lg: 4rem;
+  --height-xl: 6rem;
+  --height-video: 20vh;
+  --height-full: 100vh;
+  --height-screen: 100vh; 
+  --height-auto: auto;
 }
 
-/* Logo */
-.main-logo {
-    font-family: 'Saira Stencil One', sans-serif;
-    font-weight: normal;
-    font-size: 4vh;
-    color: black;
-    text-transform: uppercase;
-    position: fixed;
-    top: 2vh;
-    left: 10vw;
-    transform: translateX(-50%);
-    z-index: 1000;
-    text-decoration: none;
-}
-
-/* Navigation Bar */
-.nav-links{
-    font-family: 'Varela', sans-serif;
-    font-weight: normal;
-    font-size: 2vh;
-    position: fixed;
-    top: 2vh;
-    right: 10vw;
-    z-index: 1000;
-    text-decoration: none;
-    margin-top: 1vh;
-}
-
-.nav-links a {
-    margin-right: 2vw;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: normal;
-    color: black;
-}
-
-
-/* Intro on the index page*/
-.intro-content-frame {
-  position: relative;
-  left: 50%;
-  width: 33vw; /* 1/3 of the window width */
-  top: 10vh;
-  bottom: 2vh; /* Adjust this based on your nav bar height */
-  transform: translateX(-50%);
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; /* Aligns content to the top */
-  text-align: center;
-  color: #008000;
-  margin-bottom: 6vh;
-}
-
-/* Ensure video fits well */
-#looping-video {
-  max-width: 80%;
-  max-height: 40vh; /* Prevents it from being too large */
-}
-
-video {
-  -moz-appearance: none; 
-  align-items: center;
+html, body {
   margin: 0;
   padding: 0;
-  background-color: transparent !important;
+  height: 100%;
+  background-color: var(--color-page-bg);
 }
 
-.my-intro-01 {
-    font-family: 'Shrikhand', cursive; 
-    font-weight: 400; 
-    font-size: 2vw;
-    font-style: normal; 
-    letter-spacing: normal; 
-    text-transform: none; 
-    width: 100%;
-    text-align: center;
-    line-height: 1;
+main {
+  flex-grow: 1;
 }
 
-.my-intro-01:nth-of-type(2) { 
-  text-align: left; 
-  padding-left: 1vw;
+/* header,
+footer, */
+main>section {
+  box-sizing: border-box;
+  margin: 0 auto var(--spacing-xl) auto;
+  max-width: 1200px;
+  width: 1200px;
 }
 
-.my-intro-01:nth-of-type(3) { 
-  text-align: right; 
-  padding-right: 1vw;
-}
+section {
+  height: var(--height-screen);
+} 
 
-
-.intro-content-frame-02 {
-    position: relative;
-    margin-top: 5vh;
-    bottom: 4vh;
-    width: 100%; 
-    flex-direction: column;
-    font-family: 'Varela', sans-serif;
-    font-size: 1.2vw;
-    color: black;
-  }
-
-/* Contact icons*/
-.social-icons {
-    position: relative;  /* Keeps it relative to the first page */
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 1vw;            /* Space between icons */
-    justify-content: center;
-    align-items: center;
-}
-
-.social-icons img {
-    pointer-events: auto;
-    z-index: 10;
-    position: relative;
-    display: inline-block; /* Ensures proper clickable area */
-    transition: transform 0.3s ease;
-    will-change: transform; /* Optimizes rendering */
-    /* transition: transform 0.2s ease-in-out; */
-}
-
-.social-icons img:hover {
-    transform: scale(1.2); /* Slight zoom effect on hover */
-}
-
-/* About page */
-.about-container {
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: space-between;
-    margin: 5vw;
-    min-height: 80vh;
-}
-
-.about-text {
-    position: absolute;
-    top: 20vh;
-    left: 15vw;
-    width: 40%;
-    font-family: 'Varela', sans-serif;
-    font-size: 1.0vw;
-    color: black;
-}
-
-.about-title{
-    font-family: "Roboto", serif;
-    font-size: 2vw;
-    color: black;
-    font-weight: 1000;
-    text-align: center;
-}
-
-.about-image {
-    top: 22%;
-    position: absolute;
-    right: 15vw;
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.about-image img {
-    top: 20%;
-    width: 70%;
-    transform: rotate(10deg);
-    border-radius: 10px; /* Optional: Makes the image corners rounded */
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2); /* Optional: Adds shadow effect */
-}
-
-/* Skills Page */
-
-.page-skills{
-    padding-top: 8vh;
-    min-height: 100vh;
-    align-items: center;
-}
-.skills-title {
-    position: relative;
-    font-family: "Roboto", serif;
-    font-size: 2vw;
-    color: black;
-    font-weight: 1000;
-    text-align: center;
-}
-
-.skills-category {
-    position: relative;
-    font-family: "Roboto", serif;
-    font-size: 1.5vw;
-    color: black;
-    font-weight: 1000;
-    text-align: center;
-}
-
-.skills-grid {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 6vw;
-  }
-
-/* Contact Page */
-.contact{
-    padding-top: 8vh;
-    min-height: 50vh;
-    align-items: center;
-    margin-bottom: 1vh;
-    bottom: 1vh;
-}
-
-.contact-title{
-    position: relative;
-    font-family: "Roboto", serif;
-    font-size: 2vw;
-    color: black;
-    font-weight: 1000;
-    text-align: center;
-}
-
-.contact-text{
-    position: relative;
-    margin-top: 0vh;
-    text-align: center;
-    width: 100%; 
-    font-family: 'Varela', sans-serif;
-    font-size: 1.3vw;
-    color: black;
-}
-
-/* 🏃 Smooth Scrolling */
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
