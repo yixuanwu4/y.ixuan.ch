@@ -29,6 +29,7 @@
   --spacing-md: 1rem;
   --spacing-lg: 2rem;
   --spacing-xl: 4rem;
+  --spacing-xxl: 8rem;
 
   --height-xs: 1rem;
   --height-sm: 2rem;
@@ -52,8 +53,8 @@ main {
   flex-grow: 1;
 }
 
-header,
-footer,
+/* header,
+footer, */
 main>section {
   box-sizing: border-box;
   margin: 0 auto var(--spacing-xl) auto;

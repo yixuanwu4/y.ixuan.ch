@@ -3,41 +3,54 @@
 ---
 
 <style>
+  header {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 100;
+    backdrop-filter: blur(1px);
+    background-color: transparent;
+    background-image: linear-gradient(
+      to bottom,
+      var(--color-page-bg) 80%,
+      transparent
+    );
+  }
+
   .header {
     display: flex;
+    color: var(--color-text-default);
     justify-content: space-between;
-    align-items: baseline;
-    padding: var(--spacing-lg) var(--spacing-md);
+    margin: var(--spacing-lg);
+    gap: 50rem;
+    padding: 0;
   }
 
   .logo {
-    display: flex;
-    gap: var(--spacing-sm);
-    color: var(--color-text-default);
-    align-items: baseline;
     font-family: var(--font-family-logo);
     font-size: var(--font-size-xxxl);
   }
 
   nav {
     display: flex;
-    gap: var(--spacing-lg);
+    align-items: center;
   }
 
   nav ul {
     display: flex;
+    align-items: center;
     gap: var(--spacing-lg);
   }
 
   nav li {
-    display: inline-block;
+    align-items: right;
     list-style: none;
   }
 
   li a {
     display: flex;
-    align-items: center;
-    line-height: var(--spacing-lg);
     font-weight: var(--font-weight-semi-bold);
     text-decoration: none;
     color: var(--color-text-default);
@@ -48,7 +61,7 @@
 
 <header>
   <div class="header">
-    <h1 class="logo">YWU</h1>
+    <div class="logo">YWU</div>
     <nav>
       <ul>
         <li>
