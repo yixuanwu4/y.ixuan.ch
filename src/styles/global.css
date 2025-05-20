@@ -65,38 +65,6 @@ section {
   height: var(--height-screen);
 } 
 
-/* Skills Page */
-
-.page-skills {
-  padding-top: 8vh;
-  font-family: var(--font-family-intro);
-  min-height: var(--height-default);
-  align-items: center;
-}
-.skills-title {
-  position: relative;
-  font-size: 2vw;
-  color: var(--color-text-default);
-  font-weight: bold;
-  text-align: center;
-}
-
-.skills-category {
-  position: relative;
-  font-size: 1.5vw;
-  color: var(--color-text-default);
-  font-weight: 400;
-  text-align: center;
-}
-
-.skills-grid {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 6vw;
-  margin-bottom: 4vh;
-}
 
 /* Contact Page */
 .contact {
