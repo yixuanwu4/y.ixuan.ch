@@ -59,55 +59,11 @@ main>section {
   margin: 0 auto var(--spacing-xl) auto;
   max-width: 1200px;
   width: 1200px;
-
 }
 
-
-
-/* About page */
-.about-container {
-  display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: space-between;
-  font-family: var(--font-family-intro);
-  margin: 5vw;
-  min-height: var(--height-full);
-  color: var(--color-text-default);
-  gap: 2vw;
-}
-
-.about-text {
-  position: absolute;
-  top: 20vh;
-  left: 15vw;
-  width: 40%;
-  font-size: var(--font-size-md);
-}
-
-.about-title {
-  font-size: var(--font-size-xxl);
-  font-weight: bold;
-  text-align: center;
-}
-
-.about-image {
-  top: 22%;
-  position: absolute;
-  right: 15vw;
-  width: 30%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.about-image img {
-  top: 20%;
-  width: 70%;
-  transform: rotate(10deg);
-  border-radius: 10px; /* Optional: Makes the image corners rounded */
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2); /* Optional: Adds shadow effect */
-}
+section {
+  height: var(--height-screen);
+} 
 
 /* Skills Page */
 
