@@ -94,7 +94,6 @@ section {
   color: var(--color-text-default);
 }
 
-/* 🏃 Smooth Scrolling */
 html {
   scroll-behavior: smooth;
 }

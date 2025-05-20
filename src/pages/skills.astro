@@ -2,26 +2,30 @@
 import { skills } from "../data/skills.ts";
 import SkillCard from "../components/SkillCard.astro";
 ---
+
 <style>
   .page-skills {
-    padding-top: 8vh;
-    font-family: var(--font-family-intro);
-    min-height: var(--height-default);
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
     align-items: center;
+    font-family: var(--font-family-intro);
   }
   .skills-title {
     position: relative;
-    font-size: 2vw;
+    font-size: var(--font-size-xxl);
     color: var(--color-text-default);
     font-weight: bold;
-    text-align: center;
+    margin: var(--spacing-md);
   }
 
   .skills-category {
     position: relative;
-    font-size: 1.5vw;
+    font-size: var(--font-size-xl);
     color: var(--color-text-default);
-    font-weight: 400;
+    font-weight: var(--font-weight-medium);
     text-align: center;
   }
 
@@ -30,8 +34,8 @@ import SkillCard from "../components/SkillCard.astro";
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 6vw;
-    margin-bottom: 4vh;
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
   }
 </style>
 
@@ -49,4 +53,4 @@ import SkillCard from "../components/SkillCard.astro";
       </div>
     ))
   }
-</div>
+</section>
