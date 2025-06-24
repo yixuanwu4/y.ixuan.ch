@@ -1,0 +1,101 @@
+---
+interface Props {
+  projectCategory: string;
+  projectName: string;
+  projectPreview: string;
+  projectLink: string;
+}
+
+const { projectCategory, projectName, projectPreview, projectLink } =
+  Astro.props;
+
+const isMultiple = projectPreview.includes(";");
+const previewList = isMultiple
+  ? projectPreview
+      .split(";")
+      .map((src) => src.trim())
+      .filter(Boolean)
+  : [projectPreview];
+---
+
+<style>
+  .project {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    /* border: solid 1px; */
+    height: 300px;
+    width: 520px;
+    margin: 10px;
+    background-color: var(--color-project-bg);
+    border-radius: var(--spacing-md);
+    padding: var(--spacing-lg);
+  }
+
+  .category {
+    height: 16px;
+    font-size: var(--font-size-xs);
+    text-align: left;
+    /* margin: var(--spacing-md); */
+  }
+
+  .project-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    height: 80px;
+    width: 100%;
+    /* font-weight: var(--font-weight-medium); */
+    /* border-bottom: 1px solid #ccc; */
+  }
+
+  .project-name a {
+    display: block;
+    text-decoration: none;
+    font-size: var(--font-size-lg);
+    color: var(--color-text-default);
+    width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    margin-inline: var(--spacing-md);
+  }
+  .project-name a:hover{
+    color: #48a860;
+  }
+
+  .preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .projectPreview {
+    max-width: 400px;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .projectPreview.multiple {
+    margin-top: 20px;
+    height: 100px;
+    margin-inline: 4px;
+  }
+</style>
+
+<div class="project">
+  <div class="category">{projectCategory}</div>
+  <div class="project-name">
+    <a href={projectLink} class="projectName">{projectName}</a>
+  </div>
+  <div class="preview">
+    {
+      previewList.map((src, index) => (
+        <img class=`projectPreview ${isMultiple ? 'multiple' : ''}` src={src} alt={`Preview ${index + 1}`} />
+      ))
+    }
+  </div>
+</div>
