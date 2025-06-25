@@ -23,8 +23,11 @@
     display: flex;
     color: var(--color-text-default);
     justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
     margin: var(--spacing-lg);
-    gap: 50rem;
+    gap: var(--spacing-xl);
     padding: 0;
   }
 
@@ -59,13 +62,72 @@
     font-family: var(--font-family-nav);
     font-size: var(--font-size-lg);
   }
-</style>
 
+  .menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: var(--color-text-default);
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: flex;
+      margin-right: 1px;
+    }
+
+    nav {
+      position: relative;
+    }
+
+    .nav-list {
+      display: none !important;
+      position: absolute;
+      top: 2.5rem;
+      right: 0;
+      background-color: var(--color-page-bg);
+      padding: 1rem;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.5rem;
+    }
+
+    .nav-list.show {
+      display: flex !important;
+    }
+
+    .menu-toggle.open::after {
+      content: "✕";
+    }
+
+    .menu-toggle::after {
+      content: "☰";
+    }
+
+    .menu-toggle {
+      position: relative;
+      font-size: 2rem;
+      background: none;
+      border: none;
+      color: var(--color-text-default);
+      cursor: pointer;
+      display: block;
+    }
+
+    .menu-toggle span {
+      visibility: hidden;
+    }
+  }
+</style>
+<script src="../scripts/toggle.js"></script>
 <header>
   <div class="header">
     <a href="https://y.ixuan.ch/" class="logo">YWU</a>
     <nav>
-      <ul>
+      <button class="menu-toggle" aria-label="Toggle menu"></button>
+      <ul class="nav-list">
         <li>
           <a href="#about">About</a>
         </li>
