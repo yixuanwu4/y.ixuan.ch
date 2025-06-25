@@ -51,7 +51,25 @@ import ContactIcons from "../components/Contact-icons.astro";
   }
 
   @media (max-width: 768px) {
+    .intro {
+      font-size: var(--font-size-lg);
+    }
 
+    .bio {
+      font-size: var(--font-size-md);
+      flex-wrap: wrap;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .intro {
+      font-size: var(--font-size-sm);
+    }
+
+    .bio {
+      font-size: var(--font-size-xs);
+      flex-wrap: wrap;
+    }
   }
 </style>
 <script src="../scripts/videoloop.js"></script>

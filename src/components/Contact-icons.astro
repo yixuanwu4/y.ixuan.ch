@@ -9,9 +9,11 @@
     align-items: center;
     margin: var(--spacing-sm) 0;
     gap: var(--spacing-lg);
+    flex-wrap: wrap;
   }
 
   .social-icons a {
+    transform: scale(1);
     text-decoration: none;
   }
 
@@ -21,6 +23,26 @@
 
   .animate-icon:hover {
     transform: scale(1.5);
+  }
+
+  @media (max-width: 768px) {
+    .social-icons {
+      margin: var(--spacing-sm);
+    }
+    .social-icons a {
+      transform: scale(0.8);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .social-icons {
+      gap: 0;
+      justify-content: center;
+      overflow: visible;
+    }
+    .social-icons a {
+      transform: scale(0.5);
+    }
   }
 </style>
 
