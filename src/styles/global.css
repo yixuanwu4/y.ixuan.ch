@@ -60,11 +60,10 @@ main>section {
   box-sizing: border-box;
   margin: 0 auto var(--spacing-xl) auto;
   max-width: 1200px;
-  width: 1200px;
 }
 
 section {
-  height: var(--height-screen);
+  min-height: var(--height-screen);
 } 
 
 html {
