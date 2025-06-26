@@ -26,6 +26,7 @@ const previewList = isMultiple
     align-items: stretch;
     justify-content: flex-start;
     max-width: var(--width-project-card);
+    min-width: 60%;
     margin: var(--spacing-sm);
     background-color: var(--color-project-bg);
     border-radius: var(--spacing-md);
@@ -92,21 +93,19 @@ const previewList = isMultiple
 
   @media (max-width: 768px) {
     .project-name a {
-      display: block;
-      text-decoration: none;
       font-size: var(--font-size-md);
-      color: var(--color-text-default);
-      width: 100%;
-      overflow-wrap: break-word;
-      word-break: break-word;
-      margin-top: var(--spacing-md);
-      margin-inline: var(--spacing-md);
+      margin-inline: 0;
     }
 
     .projectPreview.multiple {
       max-height: var(--height-md);
       max-width: auto;
       margin-inline: var(--spacing-sm);
+    }
+
+    .project {
+      padding: var(--spacing-md);
+      min-width: 80%;
     }
   }
 
