@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const links = document.querySelectorAll(".nav-links a[href^='#']");
+    const links = document.querySelectorAll("a[href^='#']");
 
     links.forEach(link => {
         link.addEventListener("click", function (event) {
@@ -8,19 +8,28 @@ document.addEventListener("DOMContentLoaded", function () {
             const targetElement = document.getElementById(targetId);
 
             if (targetElement) {
-                // Compute correct scroll position
-                const navbarHeight = document.querySelector(".nav-links").offsetHeight;
-                const targetRect = targetElement.getBoundingClientRect();
-                const offsetTop = targetRect.top + window.pageYOffset - navbarHeight - 20;
+                const header = document.querySelector("header");
+                const navbarHeight = header ? header.offsetHeight + 20 : 0;
+
+                const titleElement = targetElement.querySelector(
+                    ".section-title, [class*='-title']"
+                );
+
+                const scrollTarget = titleElement || targetElement;
+
+                const targetPosition = scrollTarget.getBoundingClientRect().top;
+                const currentPosition = window.pageYOffset;
+                const scrollPosition = currentPosition + targetPosition - navbarHeight;
 
                 window.scrollTo({
-                    top: offsetTop,
+                    top: scrollPosition,
                     behavior: "smooth"
                 });
 
-                // Ensure focus for accessibility and better scrolling
-                targetElement.setAttribute("tabindex", "-1");
-                targetElement.focus();
+                scrollTarget.setAttribute("tabindex", "-1");
+                setTimeout(() => {
+                    scrollTarget.focus({ preventScroll: true });
+                }, 300);
             }
         });
     });
