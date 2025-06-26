@@ -36,6 +36,22 @@ import SkillCard from "../components/SkillCard.astro";
     gap: var(--spacing-xl);
     margin-bottom: var(--spacing-md);
   }
+
+  @media (max-width: 768px) {
+    .skills-title {
+      font-size: var(--font-size-lg);
+    }
+
+    .skills-category {
+      font-size: var(--font-size-md);
+    }
+
+    .skills-grid {
+      font-size: var(--font-size-sm);
+      gap: var(--spacing-md);
+      margin-bottom: var(--spacing-sm);
+    }
+  }
 </style>
 
 <section class="page-skills" id="skills">
