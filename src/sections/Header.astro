@@ -67,14 +67,14 @@
     display: none;
     font-size: var(--font-size-lg);
     background: none;
-    border: none;
     color: var(--color-text-default);
     cursor: pointer;
   }
 
   @media (max-width: 768px) {
     .header {
-      margin: var(--spacing-sm);
+      margin: var(--spacing-md);
+      padding: var(--spacing-xs);
     }
 
     .logo {
@@ -93,7 +93,7 @@
     .nav-list {
       display: none !important;
       position: absolute;
-      top: 2.5rem;
+      top: 100%;
       right: 0;
       background-color: var(--color-page-bg);
       padding: 1rem;
