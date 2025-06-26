@@ -25,8 +25,7 @@ const previewList = isMultiple
     flex-direction: column;
     align-items: stretch;
     justify-content: flex-start;
-    max-width: var(--width-project-card);
-    min-width: 60%;
+    width: var(--width-project-card);
     margin: var(--spacing-sm);
     background-color: var(--color-project-bg);
     border-radius: var(--spacing-md);
@@ -59,7 +58,7 @@ const previewList = isMultiple
     width: 100%;
     overflow-wrap: break-word;
     word-break: break-word;
-    margin-top: var(--spacing-md);
+    margin-block: var(--spacing-md);
     margin-inline: var(--spacing-md);
   }
   .project-name a:hover{
@@ -76,7 +75,6 @@ const previewList = isMultiple
     width: 80%;
   }
 
-
   .projectPreview {
     max-width: 100%;
     height: auto;
@@ -89,6 +87,13 @@ const previewList = isMultiple
     max-height: var(--height-xl);
     max-width: auto;
     margin-inline: 4px;
+  }
+
+  @media (max-width: 1280px) {
+    project {
+      padding: var(--spacing-md);
+      min-width: 80%;
+    }
   }
 
   @media (max-width: 768px) {
@@ -105,7 +110,7 @@ const previewList = isMultiple
 
     .project {
       padding: var(--spacing-md);
-      min-width: 80%;
+      width: 80%;
     }
   }
 
@@ -113,6 +118,7 @@ const previewList = isMultiple
     .project-name a {
       font-size: var(--font-size-sm);
       margin-inline: 0;
+      margin-block: var(--spacing-xs);
     }
 
     .projectPreview.multiple {
@@ -120,11 +126,6 @@ const previewList = isMultiple
       max-height: var(--height-md);
       max-width: auto;
       margin-inline: var(--spacing-sm);
-    }
-    
-    .project {
-      padding: var(--spacing-md);
-      min-width: 80%;
     }
 
     .project-name {

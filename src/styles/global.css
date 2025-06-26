@@ -48,7 +48,8 @@
   --width-md: 3rem;
   --width-lg: 4rem;
   --width-xl: 6rem;
-  --width-project-card: 40vw;
+  --width-project-card: 40rem;
+  --width-project-card-md: 20rem;
 }
 
 html, body {
