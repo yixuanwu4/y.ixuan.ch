@@ -80,6 +80,7 @@ const previewList = isMultiple
     max-width: 100%;
     height: auto;
     object-fit: contain;
+    margin-block: var(--spacing-md);
   }
 
   .projectPreview.multiple {
@@ -103,10 +104,9 @@ const previewList = isMultiple
     }
 
     .projectPreview.multiple {
-      margin-top: 20px;
       max-height: var(--height-md);
       max-width: auto;
-      margin-inline: 4px;
+      margin-inline: var(--spacing-sm);
     }
   }
 
@@ -116,15 +116,11 @@ const previewList = isMultiple
       margin-inline: 0;
     }
 
-    .projectPreview {
-      margin-block: var(--spacing-md);
-    }
-
     .projectPreview.multiple {
       margin-top: var(--spacing-md);
       max-height: var(--height-md);
       max-width: auto;
-      margin-inline: 4px;
+      margin-inline: var(--spacing-sm);
     }
     
     .project {
