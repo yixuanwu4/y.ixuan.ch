@@ -25,17 +25,15 @@ const previewList = isMultiple
     flex-direction: column;
     align-items: stretch;
     justify-content: flex-start;
-    /* border: solid 1px; */
-    height: 300px;
-    width: 520px;
-    margin: 10px;
+    max-width: var(--width-project-card);
+    margin: var(--spacing-sm);
     background-color: var(--color-project-bg);
     border-radius: var(--spacing-md);
     padding: var(--spacing-lg);
   }
 
   .category {
-    height: 16px;
+    height: var(--height-xs);
     font-size: var(--font-size-xs);
     text-align: left;
     /* margin: var(--spacing-md); */
@@ -46,7 +44,7 @@ const previewList = isMultiple
     align-items: center;
     justify-content: center;
     text-align: left;
-    height: 80px;
+    min-height: var(--height-lg);
     width: 100%;
     /* font-weight: var(--font-weight-medium); */
     /* border-bottom: 1px solid #ccc; */
@@ -60,6 +58,7 @@ const previewList = isMultiple
     width: 100%;
     overflow-wrap: break-word;
     word-break: break-word;
+    margin-top: var(--spacing-md);
     margin-inline: var(--spacing-md);
   }
   .project-name a:hover{
@@ -67,23 +66,75 @@ const previewList = isMultiple
   }
 
   .preview {
+    flex: 1;
+    flex-wrap: wrap;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-inline: auto;
+    width: 80%;
   }
 
 
   .projectPreview {
-    max-width: 400px;
+    max-width: 100%;
     height: auto;
     object-fit: contain;
   }
 
   .projectPreview.multiple {
     margin-top: 20px;
-    height: 100px;
+    max-height: var(--height-xl);
+    max-width: auto;
     margin-inline: 4px;
   }
+
+  @media (max-width: 768px) {
+    .project-name a {
+      display: block;
+      text-decoration: none;
+      font-size: var(--font-size-md);
+      color: var(--color-text-default);
+      width: 100%;
+      overflow-wrap: break-word;
+      word-break: break-word;
+      margin-top: var(--spacing-md);
+      margin-inline: var(--spacing-md);
+    }
+
+    .projectPreview.multiple {
+      margin-top: 20px;
+      max-height: var(--height-md);
+      max-width: auto;
+      margin-inline: 4px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .project-name a {
+      font-size: var(--font-size-sm);
+      margin-inline: 0;
+    }
+
+    .projectPreview {
+      margin-block: var(--spacing-md);
+    }
+
+    .projectPreview.multiple {
+      margin-top: var(--spacing-md);
+      max-height: var(--height-md);
+      max-width: auto;
+      margin-inline: 4px;
+    }
+    
+    .project {
+      padding: var(--spacing-md);
+      min-width: 80%;
+    }
+
+    .project-name {
+      min-height: var(--height-lg);
+    }
 </style>
 
 <div class="project">

@@ -38,9 +38,17 @@
   --height-lg: 4rem;
   --height-xl: 6rem;
   --height-video: 20vh;
+  --height-project-card: 30vh;
   --height-full: 100vh;
   --height-screen: 100vh; 
   --height-auto: auto;
+
+  --width-xs: 1rem;
+  --width-sm: 2rem;
+  --width-md: 3rem;
+  --width-lg: 4rem;
+  --width-xl: 6rem;
+  --width-project-card: 40vw;
 }
 
 html, body {
