@@ -41,6 +41,8 @@ const title = "About Me";
   .about-image {
     right: var(--spacing-lg);
     width: 50%;
+    display: flex;
+    justify-content: center;
   }
 
   .about-image img {
@@ -52,6 +54,43 @@ const title = "About Me";
 
   .about-image img:hover {
     transform: rotate(5deg) scale(1.1);
+  }
+
+  @media (max-width: 768px) {
+    .about-title {
+      font-size: var(--font-size-lg);
+    }
+
+    .about-container {
+      margin: 0;
+      padding: 0 var(--spacing-lg);
+      flex-direction: column;
+    }
+
+    .about-text {
+      width: 100%;
+      font-size: var(--font-size-sm);
+      text-align: justify;
+      padding: var(--spacing-sm);
+      order: 2;
+    }
+
+    .about-image {
+      width: 100%;
+      order: 1;
+    }
+
+    .about-image img {
+      max-width: 40%;
+      width: auto;
+      height: auto;
+      transform: rotate(0deg);
+      margin-top: 0;
+    }
+
+    .about-image img:hover {
+      transform: scale(1);
+    }
   }
 </style>
 
@@ -67,7 +106,7 @@ const title = "About Me";
         Blender, Astro, and Three.js, and I'm always experimenting, breaking things,
         and figuring out how to put them back together (better). <br /><br />
         Outside the screen, you'll probably find me traveling 🛥️, cycling 🚴🏻‍♀️, playing
-        badminton 🏸, or out hunting Pokémons :P I love exploring—both the world
+        badminton 🏸, or out hunting Pokémons :P I love exploring - both the world
         around me and the things I don't know (yet).<br /><br />
         Right now, I'm focused on becoming a better developer. I've been documenting
         my journey as I go, hoping that my learning process might help others starting
