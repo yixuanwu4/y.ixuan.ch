@@ -1,10 +1,5 @@
 ---
-import Header from "../sections/Header.astro";
-import Intro from "../components/Spotlight.astro";
-import About from "../pages/about.astro";
-import Skills from "../pages/skills.astro";
-import Projects from "../pages/projects.astro";
-import Contact from "../pages/contact.astro";
+import Spotlight from "../components/Spotlight.astro";
 import "../styles/global.css";
 ---
 
@@ -14,39 +9,11 @@ import "../styles/global.css";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Varela&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-
     <title>YWU</title>
   </head>
   <body>
-    <Header />
-
     <main>
-      <Intro />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
+      <Spotlight />
     </main>
-    <script src="../scripts/scroll.js"></script>
   </body>
 </html>
