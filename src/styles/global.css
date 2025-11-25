@@ -1,6 +1,6 @@
 :root {
-  --color-page-bg: #fbfbfb;
-  --color-text-default: #052204;
+  --color-page-bg: linear-gradient(to right, #020344, #28b8d5);
+  --color-text-default: #fff;
   --color-project-bg: #eeeeee;
 
   --font-family-logo: "Saira Stencil One", sans-serif;
@@ -56,7 +56,7 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color: var(--color-page-bg);
+  background: var(--color-page-bg);
 }
 
 main {
