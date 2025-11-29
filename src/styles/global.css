@@ -52,15 +52,35 @@
   --width-project-card-md: 20rem;
 }
 
-html, body {
+html {
+  font-size: 16px;
+  height: 100%;
+
+  @media (max-width: 640px) {
+    font-size: 14px;
+  }
+}
+
+body {
   margin: 0;
   padding: 0;
   height: 100%;
+  display: flex;
+  justify-content: center;
   background: var(--color-page-bg);
 }
 
 main {
-  flex-grow: 1;
+  width: 80vw;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--spacing-lg);
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  margin: auto;
+  color: var(--color-text-default);
 }
 
 /* header,
