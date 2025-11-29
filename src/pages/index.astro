@@ -1,5 +1,6 @@
 ---
-import Spotlight from "../components/Spotlight.astro";
+import Sidebar from '../layouts/Sidebar.astro';
+import MainContent from '../layouts/MainContent.astro';
 import "../styles/global.css";
 ---
 
@@ -13,7 +14,8 @@ import "../styles/global.css";
   </head>
   <body>
     <main>
-      <Spotlight />
+      <Sidebar/>
+      <MainContent/>
     </main>
   </body>
 </html>
