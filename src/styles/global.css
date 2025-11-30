@@ -98,3 +98,7 @@ section {
 html {
   scroll-behavior: smooth;
 }
+
+p {
+  font-size: var(--font-size-sm);
+}
