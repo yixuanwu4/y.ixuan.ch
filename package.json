@@ -12,5 +12,9 @@
   "dependencies": {
     "astro": "^5.3.0",
     "motion": "^12.4.4"
+  },
+  "devDependencies": {
+    "@iconify-json/mdi": "^1.2.3",
+    "unplugin-icons": "^22.5.0"
   }
 }
