@@ -63,24 +63,24 @@ html {
 
 body {
   margin: 0;
-  padding: 0;
   height: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   background: var(--color-page-bg);
+  font-family: 'Inter Variable', sans-serif;
 }
 
 main {
-  width: 80vw;
+  max-width: 1200px;
   height: 80vh;
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: var(--spacing-lg);
-  justify-content: center;
-  align-items: center;
+  padding-inline: var(--spacing-xl);
   background-color: transparent;
-  margin: auto;
   color: var(--color-text-default);
+  overflow: hidden;
 }
 
 /* header,
