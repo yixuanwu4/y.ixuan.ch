@@ -1,0 +1,39 @@
+---
+interface Props {
+  projectCategory: string;
+  projectName: string;
+  projectImg: string;
+  projectIntro: string;
+  projectLink: string;
+  projectSkills?: Array<string>;
+}
+
+const {projectCategory, projectName, projectImg, projectIntro, projectLink, projectSkills} = Astro.props;
+---
+<div class="projectCard">
+  <div class="projectCategory">
+    {projectCategory}
+  </div>
+  <a href={projectLink} class="projectName">
+    {projectName}
+  </a>
+  <div class="preview">
+    <img src={projectImg} />
+    <p> {projectIntro}</p>
+  </div>
+  {
+    projectSkills && projectSkills.length > 0 && (
+      <div class="projectSkills">
+        <ul>
+          {projectSkills.map(skill => <li>{skill}</li>)}
+        </ul>
+      </div>
+    )
+  }
+</div>
+
+<style>
+  .preview img {
+    height: 4rem;
+  }
+</style>
