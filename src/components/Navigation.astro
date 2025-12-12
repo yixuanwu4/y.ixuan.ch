@@ -1,20 +1,67 @@
 ---
 ---
 <div class="sidebar navigation">
-  <a>
-    About me
-  </a>
-  <a>
-    Projects
-  </a>
-  <a>
-    Blogs
-  </a>
+  <button class="nav-btn">
+    <span>
+      ABOUT
+    </span>
+  </button>
+  <button class="nav-btn">
+    <span>
+      PROJECTS
+    </span>
+  </button>
+  <button class="nav-btn">
+    <span>
+      BLOGS
+    </span>
+  </button>
 </div>
 
 <style>
   .navigation {
     display: flex;
+    position: relative;
     flex-direction: column;
+    margin-block: var(--spacing-xl);
+  }
+
+  .navigation button {
+    position: relative;
+    text-align: left;
+    background-color: transparent;
+    border: 0;
+    color: var(--color-text-default);
+    font-size: var(--font-size-xs);
+    letter-spacing: var(--spacing-xxs);
+    font-weight: var(--font-weight-bold);
+    cursor: pointer;
+    margin-block: var(--spacing-sm);
+  }
+
+  .nav-btn::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 1.5px;
+    background: var(--color-text-default);
+    transition: width 0.3s ease;
+  }
+
+  .nav-btn:hover::before {
+    width: 80px;
+  }
+
+  .nav-btn span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    padding-left: 50px;
+  }
+
+  .nav-btn:hover span {
+    transform: translateX(40px);
   }
 </style>

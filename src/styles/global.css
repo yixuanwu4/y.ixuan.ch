@@ -25,6 +25,7 @@
   --font-weight-extra-bold: 800;
   --font-weight-black: 900;
 
+  --spacing-xxs: 0.12rem;
   --spacing-xs: 0.25rem;
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
@@ -75,8 +76,8 @@ main {
   max-width: 1200px;
   height: 80vh;
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: var(--spacing-lg);
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xs);
   padding-inline: var(--spacing-xl);
   background-color: transparent;
   color: var(--color-text-default);
