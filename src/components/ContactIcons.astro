@@ -3,7 +3,7 @@ import GithubIcon from "~icons/mdi/github";
 import EmailIcon from "~icons/mdi/alternate-email";
 import LinkedinIcon from "~icons/mdi/linkedin";
 ---
-<div>
+<div class="contact">
   <a href="mailto:y+website@ixuan.ch">
     <EmailIcon />
   </a>
@@ -14,3 +14,19 @@ import LinkedinIcon from "~icons/mdi/linkedin";
     <LinkedinIcon />
   </a>
 </div>
+
+<style>
+  .contact {
+    margin-top: auto;
+    margin-bottom: var(--spacing-lg);
+  }
+  .contact a {
+    text-decoration: none;
+    color: var(--color-text-unselect);
+    margin: var(--spacing-xs);
+  }
+  .contact a svg {
+    width: var(--font-size-xxl);
+    height: var(--font-size-xxl);
+  }
+</style>

@@ -29,9 +29,9 @@
   .navigation button {
     position: relative;
     text-align: left;
-    background-color: transparent;
+    background: transparent;
     border: 0;
-    color: var(--color-text-default);
+    color: var(--color-text-unselect);
     font-size: var(--font-size-xs);
     letter-spacing: var(--spacing-xxs);
     font-weight: var(--font-weight-bold);
@@ -47,21 +47,26 @@
     transform: translateY(-50%);
     width: 40px;
     height: 1.5px;
-    background: var(--color-text-default);
+    background: var(--color-text-unselect);
+    opacity: 0.8;
     transition: width 0.3s ease;
   }
 
   .nav-btn:hover::before {
     width: 80px;
+    background: var(--color-text-default);
   }
 
   .nav-btn span {
     display: inline-block;
     transition: transform 0.3s ease;
     padding-left: 50px;
+    opacity: 0.8;
   }
 
   .nav-btn:hover span {
     transform: translateX(40px);
+    color: var(--color-text-default);
+    opacity: 1.0;
   }
 </style>
