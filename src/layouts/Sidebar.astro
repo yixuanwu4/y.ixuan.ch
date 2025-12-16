@@ -3,8 +3,18 @@ import Profile from "../components/Profile.astro";
 import Navigation from "../components/Navigation.astro";
 import Contact from "../components/ContactIcons.astro";
 ---
-<div>
+<div class="sidebar">
   <Profile />
   <Navigation />
   <Contact />
 </div>
+
+<style>
+  .sidebar {
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    gap: var(--spacing-md); 
+  }
+</style>
