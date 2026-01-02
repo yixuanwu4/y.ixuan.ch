@@ -31,7 +31,8 @@
   --spacing-md: 1rem;
   --spacing-lg: 2rem;
   --spacing-xl: 4rem;
-  --spacing-xxl: 8rem;
+  --spacing-xxl: 6rem;
+  --spacing-xxxl: 8rem;
 
   --height-xs: 1rem;
   --height-sm: 2rem;
@@ -74,25 +75,23 @@ body {
 }
 
 main {
-  max-width: 1200px;
-  flex-grow: 1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  max-width: 1200px;;
+  display: flex;
+  justify-content: space-between;
   gap: var(--spacing-xs);
-  padding-inline: var(--spacing-xl);
+  align-items: center;
   background-color: transparent;
   color: var(--color-text-default);
   overflow: hidden;
+  padding: 0 var(--spacing-xxl);
 }
 
 /* header,
 footer, */
 main>section {
   box-sizing: border-box;
-  margin: 0 auto var(--spacing-xl) auto;
   max-width: 1200px;
 }
-
 
 html {
   scroll-behavior: smooth;
