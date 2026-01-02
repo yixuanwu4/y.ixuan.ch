@@ -4,17 +4,29 @@ import Navigation from "../components/Navigation.astro";
 import Contact from "../components/ContactIcons.astro";
 ---
 <div class="sidebar">
-  <Profile />
-  <Navigation />
-  <Contact />
+  <div class="content">
+    <Profile />
+    <Navigation />
+    <Contact />
+  </div>
 </div>
 
 <style>
   .sidebar {
-    max-height: 100%;
+    width: 48%;
+    flex-shrink: 0;
+    height: 100vh;
+    padding: var(--spacing-xxl) 0;
+    box-sizing: border-box;
     display: flex;
+  }
+
+  .content {
+    display: flex;
+    height: 100%;
+    flex: 1;
     flex-direction: column;
-    overflow-y: auto;
+    justify-content: space-between; 
     gap: var(--spacing-md); 
   }
 </style>
