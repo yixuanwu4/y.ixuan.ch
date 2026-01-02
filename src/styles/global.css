@@ -1,7 +1,8 @@
 :root {
-  --color-page-bg: linear-gradient(to right, #3D7EAA, #FFE47A);
-  --color-text-default: #fff;
-  --color-text-unselect: #eeeeee;
+  --color-page-bg: linear-gradient(to right, #041b36, #111122);
+  --color-text-default: #e2e8f0;
+  --color-text-unselect: #64748b;
+  --color-text-para: #94a3b8;
 
   --font-family-logo: "Saira Stencil One", sans-serif;
   --font-family-intro: "Montserrat", sans-serif;
@@ -97,6 +98,4 @@ html {
   scroll-behavior: smooth;
 }
 
-p {
-  font-size: var(--font-size-sm);
-}
+
