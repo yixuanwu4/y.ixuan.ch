@@ -3,24 +3,21 @@ import ProjectCard from "../components/ProjectCard.astro";
 ---
 <section class="projects">
   <ProjectCard 
-  projectCategory = "Software Development";
   projectName = "Lisa Greber Online Shop";
   projectImg = "public/lisagreber.png";
-  projectIntro = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+  projectIntro = "Built and customized a Shopify store for artists, blending tailored design with backend management to enhance customer experience and drive sales."
   projectLink = "https://lisagreber.ch/";
-  projectSkills?: Array<string />
+  projectSkills = {["Liquid", "HTML", "CSS", "JavaScript"]} />
   <ProjectCard 
-  projectCategory = "Software Development";
   projectName = "Quassel";
   projectImg = "public/quassel.png";
-  projectIntro = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+  projectIntro = "Landing page for project Quassel - a platform to collect children's language exposure data for University research."
   projectLink = "https://www.quassel.ch/";
-  projectSkills?: Array<string />
+  projectSkills = {["Astro", "JavaScript"]} />
   <ProjectCard 
-  projectCategory = "CSS";
   projectName = "Loading Animation Gallery";
   projectImg = "public/gifs/heartbeat.gif";
-  projectIntro = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+  projectIntro = "A growing collection of simple, creative loading animations built with HTML and CSS only."
   projectLink = "https://github.com/yixuanwu4/loading-animations-gallery";
-  projectSkills?: Array<string />
+  projectSkills = {["HTML", "CSS"]} />
 </section>
