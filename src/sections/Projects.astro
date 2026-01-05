@@ -3,24 +3,21 @@ import ProjectCard from "../components/ProjectCard.astro";
 ---
 <section class="projects">
   <ProjectCard 
-  projectCategory = "Software Development";
   projectName = "Lisa Greber Online Shop";
   projectImg = "public/lisagreber.png";
   projectIntro = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
   projectLink = "https://lisagreber.ch/";
-  projectSkills?: Array<string />
+  projectSkills = {["Liquid", "HTML", "CSS", "JavaScript"]} />
   <ProjectCard 
-  projectCategory = "Software Development";
   projectName = "Quassel";
   projectImg = "public/quassel.png";
   projectIntro = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
   projectLink = "https://www.quassel.ch/";
-  projectSkills?: Array<string />
+  projectSkills = {["Astro", "JavaScript"]} />
   <ProjectCard 
-  projectCategory = "CSS";
   projectName = "Loading Animation Gallery";
   projectImg = "public/gifs/heartbeat.gif";
   projectIntro = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
   projectLink = "https://github.com/yixuanwu4/loading-animations-gallery";
-  projectSkills?: Array<string />
+  projectSkills = {["HTML", "CSS"]} />
 </section>

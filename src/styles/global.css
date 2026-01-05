@@ -1,8 +1,10 @@
 :root {
   --color-page-bg: linear-gradient(to right, #041b36, #111122);
+  --color-project-card-bg: #1D314A;
   --color-text-default: #e2e8f0;
   --color-text-unselect: #64748b;
   --color-text-para: #94a3b8;
+  --color-text-bubble: #4DEEEA;
 
   --font-family-logo: "Saira Stencil One", sans-serif;
   --font-family-intro: "Montserrat", sans-serif;
@@ -40,6 +42,7 @@
   --height-md: 3rem;
   --height-lg: 4rem;
   --height-xl: 6rem;
+  --height-xxl: 7rem;
   --height-video: 20vh;
   --height-project-card: 30vh;
   --height-full: 100vh;
