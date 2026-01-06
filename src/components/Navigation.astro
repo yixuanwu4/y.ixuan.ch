@@ -1,19 +1,19 @@
 ---
 ---
 <div class="sidebar navigation">
-  <button class="nav-btn">
+  <button class="nav-btn" onclick="scrollToSection('about')">
     <span>
       ABOUT
     </span>
   </button>
-  <button class="nav-btn">
+  <button class="nav-btn" onclick="scrollToSection('experience')">
     <span>
-      PROJECTS
+      EXPERIENCE
     </span>
   </button>
-  <button class="nav-btn">
+  <button class="nav-btn" onclick="scrollToSection('projects')">
     <span>
-      BLOGS
+      PROJECTS
     </span>
   </button>
 </div>
@@ -71,3 +71,22 @@
     opacity: 1.0;
   }
 </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.nav-btn').forEach((button, index) => {
+      button.addEventListener('click', () => {
+        const sections = ['about', 'experience', 'projects'];
+        const sectionId = sections[index];
+        
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  });
+</script>
