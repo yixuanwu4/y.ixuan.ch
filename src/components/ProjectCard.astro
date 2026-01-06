@@ -1,36 +1,26 @@
 ---
-import TopRight from "~icons/mdi/arrow-top-right";
+import CardContent from "./CardContent.astro";
 
 interface Props {
-  projectName: string;
-  projectImg: string;
-  projectIntro: string;
-  projectLink: string;
-  projectSkills?: Array<string>;
+  contentTitle: string;
+  contentImg: string;
+  contentIntro: string;
+  contentLink: string;
+  tags?: Array<string>;
 }
 
-const {projectName, projectImg, projectIntro, projectLink, projectSkills} = Astro.props;
+const {contentTitle, contentImg, contentIntro, contentLink, tags} = Astro.props;
 ---
 <div class="projectCard">
   <div class="preview">
-    <img src={projectImg} />
+    <img src={contentImg} />
   </div>
-  <div class="projectInfo">
-    <a href={projectLink} class="projectName">
-      {projectName}
-      <TopRight />
-    </a>
-    <p> {projectIntro}</p>
-    {
-    projectSkills && projectSkills.length > 0 && (
-      <div class="projectSkills">
-        <ul>
-          {projectSkills.map(skill => <li>{skill}</li>)}
-        </ul>
-      </div>
-    )
-  }
-  </div>
+  <CardContent
+    title={contentTitle}
+    description={contentIntro}
+    link={contentLink}
+    tags={tags}
+   />
 </div>
 
 <style>
@@ -50,27 +40,14 @@ const {projectName, projectImg, projectIntro, projectLink, projectSkills} = Astr
     border-width: 0.1px 0 0 0.1px;
     border-radius: 5px;
   }
-  .projectName {
-    font-size: var(--font-size-md);
-    text-decoration: none;
-    align-items: baseline;
-    color: var(--color-text-default);
-    display: inline-flex;
-    align-items: center; 
-  }
-  .projectCard:hover .projectName{
+  .projectCard:hover :global(.contentTitle){
     color: var(--color-text-bubble);
   }
-  .projectInfo svg {
-    width: var(--font-size-sm);
-    height: var(--font-size-sm);
-    margin-left: var(--spacing-xs);
-  }
-  .projectCard:hover .projectName svg {
+  .projectCard:hover :global(.contentTitle svg) {
     transform: translate(2px, -2px);
     transition: all 0.3s ease;
   }
-  .projectInfo p {
+  .cardContent p {
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-light);
     line-height: 1.5;
@@ -81,14 +58,14 @@ const {projectName, projectImg, projectIntro, projectLink, projectSkills} = Astr
     border: var(--color-text-unselect) 2px solid;
   }
 
-  .projectSkills ul {
+  .tags ul {
     display: flex;
     gap: var(--spacing-sm);
     padding: 0;
     list-style-type: none;
     margin-bottom: 0;
   }
-  .projectSkills li {
+  .tags li {
     font-size: var(--font-size-xs);
     color: var(--color-text-bubble);
     background-color:rgba(237, 253, 252, 0.2);
