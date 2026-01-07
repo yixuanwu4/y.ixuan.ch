@@ -1,23 +1,31 @@
 ---
-import ProjectCard from "../components/ProjectCard.astro";
+import DisplayCard from "../components/DisplayCard.astro";
 ---
 <section class="projects" id="projects">
-  <ProjectCard 
-  contentTitle = "Lisa Greber Online Shop";
-  contentImg = "public/lisagreber.png";
-  contentIntro = "Built and customized a Shopify store for artists, blending tailored design with backend management to enhance customer experience and drive sales."
-  contentLink = "https://lisagreber.ch/";
-  tags = {["Liquid", "HTML", "CSS", "JavaScript"]} />
-  <ProjectCard 
-  contentTitle = "Quassel";
-  contentImg = "public/quassel.png";
-  contentIntro = "Landing page for project Quassel - a platform to collect children's language exposure data for University research."
-  contentLink = "https://www.quassel.ch/";
-  tags = {["Astro", "JavaScript"]} />
-  <ProjectCard 
-  contentTitle = "Loading Animation Gallery";
-  contentImg = "public/gifs/heartbeat.gif";
-  contentIntro = "A growing collection of simple, creative loading animations built with HTML and CSS only."
-  contentLink = "https://github.com/yixuanwu4/loading-animations-gallery";
-  tags = {["HTML", "CSS"]} />
+  <DisplayCard
+  displayName = "Lisa Greber Online Shop";
+  displayImg = "public/lisagreber.png";
+  displayIntro = "Built and customized a Shopify store for artists, blending tailored design with backend management to enhance customer experience and drive sales."
+  displayLink = "https://lisagreber.ch/";
+  displaySkills = {["Liquid", "HTML", "CSS", "JavaScript"]} />
+  <DisplayCard
+  displayName = "Quassel";
+  displayImg = "public/quassel.png";
+  displayIntro = "Landing page for display Quassel - a platform to collect children's language exposure data for University research."
+  displayLink = "https://www.quassel.ch/";
+  displaySkills = {["Astro"]} />
+  <DisplayCard
+  displayName = "Loading Animation Gallery";
+  displayImg = "public/gifs/heartbeat.gif";
+  displayIntro = "A growing collection of simple, creative loading animations built with HTML and CSS only."
+  displayLink = "https://github.com/yixuanwu4/loading-animations-gallery";
+  displaySkills = {["HTML", "CSS"]} />
 </section>
+
+<style>
+  .projects {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+</style>
