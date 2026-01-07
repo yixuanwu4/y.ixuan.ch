@@ -1,6 +1,6 @@
 :root {
   --color-page-bg:  #161823;
-  --color-project-card-bg: #1D314A;
+  --color-display-card-bg: rgba(45, 47, 56, 0.2);
   --color-text-default: #e2e8f0;
   --color-text-unselect: #64748b;
   --color-text-para: #94a3b8;
@@ -104,4 +104,15 @@ html {
   scroll-behavior: smooth;
 }
 
+#about, #experience, #projects {
+  scroll-margin-top: var(--spacing-xxl);
+}
 
+.card-container:hover .displayCard {
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+  
+.card-container:hover .displayCard:hover {
+  opacity: 1;
+}
