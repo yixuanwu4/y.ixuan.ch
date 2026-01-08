@@ -52,7 +52,6 @@ const {
 
 <style>
   .displayCard {
-    padding: var(--spacing-md);
     display: flex;
     gap: var(--spacing-md);
     color: var(--color-text-para);
@@ -60,6 +59,7 @@ const {
     border-width: 0.1px 0 0 0.1px;
     box-sizing: border-box;
     width: 100%;
+    margin-bottom: var(--spacing-md);
   }
   .displayCard:hover {
     background-color: var(--color-display-card-bg);
@@ -113,13 +113,17 @@ const {
     padding: 0;
     list-style-type: none;
     margin-bottom: 0;
+    flex-wrap: wrap;
   }
   .displaySkills li {
     font-size: var(--font-size-xs);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--color-text-bubble);
     background-color: rgba(237, 253, 252, 0.2);
     padding: var(--spacing-xs) var(--spacing-sm);
-    border-radius: 20px;
+    border-radius: 10px;
     margin: 0;
   }
 </style>

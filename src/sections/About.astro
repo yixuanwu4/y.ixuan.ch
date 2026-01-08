@@ -1,6 +1,7 @@
 ---
 ---
 <section class="about" id="about">
+  <div class="sectionTitle">ABOUT</div>
   <p>
     As a developer passionate about crafting visually appealing and user-friendly web experiences, I enjoy the full creative process - from designing intuitive UI/UX to bringing those designs to life with clean, functional code.
   </p>
@@ -38,5 +39,11 @@
   .highlight {
     color: var(--color-text-default);
     font-weight: var(--font-weight-normal);
+  }
+
+  @media (max-width: 1024px) {
+    .about {
+      padding: 0 var(--spacing-md);
+    }
   }
 </style>
