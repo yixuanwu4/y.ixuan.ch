@@ -25,6 +25,10 @@
     flex-direction: column;
     margin-block: var(--spacing-xl);
     width: min-content;
+
+    @media (max-width:1024px) {
+      display: none;
+    }
   }
 
   .navigation button {
@@ -90,7 +94,6 @@
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const sectionIndex = allSections.findIndex(section => section === entry.target);
-          console.log(sectionIndex);
           if (sectionIndex != -1) {
             navButtons.forEach(btn => btn.classList.remove("active"));
             navButtons[sectionIndex].classList.add("active");
