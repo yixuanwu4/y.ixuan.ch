@@ -1,7 +1,10 @@
 :root {
-  --color-page-bg: #fbfbfb;
-  --color-text-default: #052204;
-  --color-project-bg: #eeeeee;
+  --color-page-bg:  #161823;
+  --color-display-card-bg: rgba(45, 47, 56, 0.2);
+  --color-text-default: #e2e8f0;
+  --color-text-unselect: #64748b;
+  --color-text-para: #94a3b8;
+  --color-text-bubble: #4DEEEA;
 
   --font-family-logo: "Saira Stencil One", sans-serif;
   --font-family-intro: "Montserrat", sans-serif;
@@ -25,18 +28,22 @@
   --font-weight-extra-bold: 800;
   --font-weight-black: 900;
 
+  --spacing-xxs: 0.12rem;
   --spacing-xs: 0.25rem;
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
   --spacing-lg: 2rem;
   --spacing-xl: 4rem;
-  --spacing-xxl: 8rem;
+  --spacing-xxl: 6rem;
+  --spacing-xxxl: 8rem;
+  --spacing-xxxxl: 12rem;
 
   --height-xs: 1rem;
   --height-sm: 2rem;
   --height-md: 3rem;
   --height-lg: 4rem;
   --height-xl: 6rem;
+  --height-xxl: 7rem;
   --height-video: 20vh;
   --height-project-card: 30vh;
   --height-full: 100vh;
@@ -52,29 +59,84 @@
   --width-project-card-md: 20rem;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
+html {
+  font-size: 16px;
   height: 100%;
-  background-color: var(--color-page-bg);
+  box-sizing: border-box;
+  @media (max-width: 640px) {
+    font-size: 14px;
+  }
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: var(--color-page-bg);
+  font-family: 'Inter Variable', sans-serif;
+  box-sizing: border-box;
 }
 
 main {
-  flex-grow: 1;
+  display: grid;
+  grid-template-columns: minmax(500px, 1fr) minmax(600px, 1.5fr);
+  gap: var(--spacing-lg);
+  align-items: start;
+  justify-content: center;
+  background-color: transparent;
+  color: var(--color-text-default);
+  padding: 0 var(--spacing-sm);
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
 }
 
 /* header,
 footer, */
-main>section {
-  box-sizing: border-box;
-  margin: 0 auto var(--spacing-xl) auto;
-  max-width: 1200px;
-}
-
 section {
-  min-height: var(--height-screen);
-} 
+  box-sizing: border-box;
+  max-width: 1200px;
+  padding: var(--spacing-md);
+}
 
 html {
   scroll-behavior: smooth;
+}
+
+#about, #experience, #projects {
+  scroll-margin-top: var(--spacing-xxl);
+}
+
+.sectionTitle {
+  letter-spacing: var(--spacing-xxs);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-lg);
+  display: none;
+}
+
+.card-container:hover .displayCard {
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+  
+.card-container:hover .displayCard:hover {
+  opacity: 1;
+}
+
+@media (max-width: 1024px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    padding: 0 var(--spacing-md);
+  }
+  
+  body {
+    overflow-y: auto;
+  }
+
+  .sectionTitle {
+    display: flex;
+  }
 }

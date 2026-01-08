@@ -1,0 +1,110 @@
+---
+---
+<div class="sidebar navigation">
+  <button class="nav-btn" id="about">
+    <span>
+      ABOUT
+    </span>
+  </button>
+  <button class="nav-btn" id="experience">
+    <span>
+      EXPERIENCE
+    </span>
+  </button>
+  <button class="nav-btn" id="projects">
+    <span>
+      PROJECTS
+    </span>
+  </button>
+</div>
+
+<style>
+  .navigation {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin-block: var(--spacing-xl);
+    width: min-content;
+
+    @media (max-width:1024px) {
+      display: none;
+    }
+  }
+
+  .navigation button {
+    position: relative;
+    text-align: left;
+    background: transparent;
+    border: 0;
+    color: var(--color-text-unselect);
+    font-size: var(--font-size-xs);
+    letter-spacing: var(--spacing-xxs);
+    font-weight: var(--font-weight-bold);
+    cursor: pointer;
+    margin-block: var(--spacing-sm);
+  }
+
+  .nav-btn::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 1.5px;
+    background: var(--color-text-unselect);
+    opacity: 0.8;
+    transition: width 0.2s ease;
+  }
+
+  .nav-btn:hover::before,
+  .nav-btn.active::before {
+    width: 80px;
+    background: var(--color-text-default);
+  }
+
+  .nav-btn span {
+    display: inline-block;
+    transition: transform 0.2s ease;
+    padding-left: 50px;
+    opacity: 0.8;
+  }
+
+  .nav-btn:hover span,
+  .nav-btn.active span {
+    transform: translateX(40px);
+    color: var(--color-text-default);
+    opacity: 1.0;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const navButtons = document.querySelectorAll('.nav-btn');
+    const allSections = Array.from(document.querySelectorAll('section[id]'));
+
+    navButtons.forEach((button, index) => {
+      button.addEventListener('click', ()=>{
+        const targetSection = allSections[index];
+        targetSection?.scrollIntoView({behavior: 'smooth', block: 'start'});
+      })
+    })
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const sectionIndex = allSections.findIndex(section => section === entry.target);
+          if (sectionIndex != -1) {
+            navButtons.forEach(btn => btn.classList.remove("active"));
+            navButtons[sectionIndex].classList.add("active");
+          }
+        }
+      })
+    }, {threshold: 0.5});
+
+    allSections.forEach(section => {
+      observer.observe(section);
+    })
+    
+  });
+</script>

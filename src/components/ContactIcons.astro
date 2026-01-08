@@ -1,0 +1,43 @@
+---
+import GithubIcon from "~icons/mdi/github";
+import EmailIcon from "~icons/mdi/alternate-email";
+import LinkedinIcon from "~icons/mdi/linkedin";
+---
+<div class="contact">
+  <a href="mailto:y+website@ixuan.ch">
+    <EmailIcon />
+  </a>
+  <a href="https://github.com/yixuanwu4">
+    <GithubIcon />
+  </a>
+  <a href="https://www.linkedin.com/in/yixuan-wu-/">
+    <LinkedinIcon />
+  </a>
+</div>
+
+<style>
+  .contact {
+    margin-top: auto;
+  }
+  @media (max-width:1024px) {
+    .contact {
+      margin-top: var(--spacing-md);
+    }
+  }
+  .contact a {
+    text-decoration: none;
+    color: var(--color-text-unselect);
+    opacity: 0.8;
+    margin: var(--spacing-xs);
+    transition: opacity 0.3s ease;
+  }
+  .contact a:hover {
+    color: var(--color-text-default);
+    opacity: 1.0;
+  }
+  .contact a svg {
+    width: var(--font-size-xxl);
+    height: var(--font-size-xxl);
+  }
+
+</style>
