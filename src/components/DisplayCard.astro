@@ -1,0 +1,125 @@
+---
+import TopRight from "~icons/mdi/arrow-top-right";
+
+interface Props {
+  displayName: string;
+  displayImg?: string;
+  displayTime?: string;
+  displayIntro: string;
+  displayLink?: string;
+  displaySkills?: Array<string>;
+}
+
+const {
+  displayName,
+  displayImg,
+  displayTime,
+  displayIntro,
+  displayLink,
+  displaySkills,
+} = Astro.props;
+---
+
+<div class="displayCard">
+  {
+    displayImg ? (
+      <div class="preview">
+        <img src={displayImg} />
+      </div>
+    ) : displayTime ? (
+      <div class="time">{displayTime}</div>
+    ) : null
+  }
+  <div class="displayInfo">
+    <a href={displayLink} class="displayName">
+      {displayName}
+      <TopRight />
+    </a>
+    <p>{displayIntro}</p>
+    {
+      displaySkills && displaySkills.length > 0 && (
+        <div class="displaySkills">
+          <ul>
+            {displaySkills.map((skill) => (
+              <li>{skill}</li>
+            ))}
+          </ul>
+        </div>
+      )
+    }
+  </div>
+</div>
+
+<style>
+  .displayCard {
+    padding: var(--spacing-md);
+    display: flex;
+    gap: var(--spacing-md);
+    color: var(--color-text-para);
+    border: solid transparent;
+    border-width: 0.1px 0 0 0.1px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .displayCard:hover {
+    background-color: var(--color-display-card-bg);
+    box-shadow:
+      inset 0 0 15px rgba(135, 135, 135, 0.1),
+      0 0 18px 3px rgba(0, 0, 0, 0.3);
+    border: solid var(--color-text-unselect);
+    border-width: 0.1px 0.1px 0.1px 0.1px;
+    border-radius: 5px;
+  }
+  .displayName {
+    font-size: var(--font-size-md);
+    text-decoration: none;
+    align-items: baseline;
+    color: var(--color-text-default);
+    display: inline;
+  }
+  .displayCard:hover .displayName {
+    color: var(--color-text-bubble);
+  }
+  .displayInfo svg {
+    width: var(--font-size-sm);
+    height: var(--font-size-sm);
+    margin-left: var(--spacing-xs);
+  }
+  .displayCard:hover .displayName svg {
+    transform: translate(2px, -2px);
+    transition: all 0.3s ease;
+  }
+  .displayInfo p {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-light);
+    line-height: 1.5;
+    word-break: break-word;
+  }
+  .preview, .time {
+    flex: 0 0 25%;
+    max-width: 30%;
+  }
+  .preview img {
+    width: 100%;
+    border: var(--color-text-unselect) 2px solid;
+  }
+  .time {
+    width: 100%;
+    font-size: var(--font-size-xs);
+  }
+  .displaySkills ul {
+    display: flex;
+    gap: var(--spacing-sm);
+    padding: 0;
+    list-style-type: none;
+    margin-bottom: 0;
+  }
+  .displaySkills li {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-bubble);
+    background-color: rgba(237, 253, 252, 0.2);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: 20px;
+    margin: 0;
+  }
+</style>
