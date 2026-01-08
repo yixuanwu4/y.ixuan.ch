@@ -1,17 +1,17 @@
 ---
 ---
 <div class="sidebar navigation">
-  <button class="nav-btn" onclick="scrollToSection('about')">
+  <button class="nav-btn" id="about">
     <span>
       ABOUT
     </span>
   </button>
-  <button class="nav-btn" onclick="scrollToSection('experience')">
+  <button class="nav-btn" id="experience">
     <span>
       EXPERIENCE
     </span>
   </button>
-  <button class="nav-btn" onclick="scrollToSection('projects')">
+  <button class="nav-btn" id="projects">
     <span>
       PROJECTS
     </span>
@@ -50,22 +50,24 @@
     height: 1.5px;
     background: var(--color-text-unselect);
     opacity: 0.8;
-    transition: width 0.3s ease;
+    transition: width 0.2s ease;
   }
 
-  .nav-btn:hover::before {
+  .nav-btn:hover::before,
+  .nav-btn.active::before {
     width: 80px;
     background: var(--color-text-default);
   }
 
   .nav-btn span {
     display: inline-block;
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease;
     padding-left: 50px;
     opacity: 0.8;
   }
 
-  .nav-btn:hover span {
+  .nav-btn:hover span,
+  .nav-btn.active span {
     transform: translateX(40px);
     color: var(--color-text-default);
     opacity: 1.0;
@@ -74,19 +76,32 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.nav-btn').forEach((button, index) => {
-      button.addEventListener('click', () => {
-        const sections = ['about', 'experience', 'projects'];
-        const sectionId = sections[index];
-        
-        const section = document.getElementById(sectionId);
-        if (section) {
-          section.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
+    const navButtons = document.querySelectorAll('.nav-btn');
+    const allSections = Array.from(document.querySelectorAll('section[id]'));
+
+    navButtons.forEach((button, index) => {
+      button.addEventListener('click', ()=>{
+        const targetSection = allSections[index];
+        targetSection?.scrollIntoView({behavior: 'smooth', block: 'start'});
+      })
+    })
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const sectionIndex = allSections.findIndex(section => section === entry.target);
+          console.log(sectionIndex);
+          if (sectionIndex != -1) {
+            navButtons.forEach(btn => btn.classList.remove("active"));
+            navButtons[sectionIndex].classList.add("active");
+          }
         }
-      });
-    });
+      })
+    }, {threshold: 0.5});
+
+    allSections.forEach(section => {
+      observer.observe(section);
+    })
+    
   });
 </script>
