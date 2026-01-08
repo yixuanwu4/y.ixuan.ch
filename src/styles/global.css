@@ -98,7 +98,6 @@ footer, */
 section {
   box-sizing: border-box;
   max-width: 1200px;
-  padding: var(--spacing-md);
 }
 
 html {
