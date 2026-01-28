@@ -1,26 +1,20 @@
 ---
 import DisplayCard from "../components/DisplayCard.astro";
+import { getCollection } from "astro:content";
+
+const projects = await getCollection("projects");
 ---
 <section class="projects card-container" id="projects">
   <div class="sectionTitle">PROJECTS</div>
-  <DisplayCard
-  displayName = "Lisa Greber Online Shop";
-  displayImg = "/lisagreber.png";
-  displayIntro = "Built and customized a Shopify store for artists, blending tailored design with backend management to enhance customer experience and drive sales."
-  displayLink = "https://lisagreber.ch/";
-  displaySkills = {["Liquid", "HTML", "CSS", "JavaScript"]} />
-  <DisplayCard
-  displayName = "Quassel";
-  displayImg = "/quassel.png";
-  displayIntro = "Landing page for display Quassel - a platform to collect children's language exposure data for University research."
-  displayLink = "https://www.quassel.ch/";
-  displaySkills = {["Astro"]} />
-  <DisplayCard
-  displayName = "Loading Animation Gallery";
-  displayImg = "/gifs/heartbeat.gif";
-  displayIntro = "A growing collection of simple, creative loading animations built with HTML and CSS only."
-  displayLink = "https://github.com/yixuanwu4/loading-animations-gallery";
-  displaySkills = {["HTML", "CSS"]} />
+  {projects.map(item => (
+    <DisplayCard
+      displayName = {item.data.displayName}
+      displayImg = {item.data.displayImg}
+      displayLink = {item.data.displayLink}
+      displayIntro = {item.body}
+      displaySkills = {item.data.displaySkills} 
+    />
+  ))}
 </section>
 
 <style>
