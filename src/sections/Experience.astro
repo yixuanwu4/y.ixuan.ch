@@ -3,10 +3,14 @@ import DisplayCard from "../components/DisplayCard.astro";
 import { getCollection } from "astro:content";
 
 const experiences = await getCollection("experience");
+
+const sortedExperiences = experiences.sort(
+    (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+  );
 ---
 <section class="experience card-container" id="experience">
   <div class="sectionTitle">EXPERIENCE</div>
-  {experiences.map(item => (
+  {sortedExperiences.map(item => (
     <DisplayCard
       displayName = {item.data.displayName}
       displayTime = {item.data.displayTime}
