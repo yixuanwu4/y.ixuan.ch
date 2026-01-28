@@ -20,5 +20,20 @@ import Project from "../sections/Projects.astro";
     flex-direction: column;
     justify-content: space-between;
     gap: var(--spacing-xxl);
+    scrollbar-width: none;
   }
 </style>
+
+<script>
+  const mainContent = document.querySelector(".mainContent");
+
+  if (mainContent) {
+    window.addEventListener(
+      "wheel",
+      (e) => {
+        mainContent.scrollTop += e.deltaY;
+      },
+      { passive: true }
+    );
+  }
+</script>
