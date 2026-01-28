@@ -31,9 +31,10 @@ import Project from "../sections/Projects.astro";
     window.addEventListener(
       "wheel",
       (e) => {
+        e.preventDefault();
         mainContent.scrollTop += e.deltaY;
       },
-      { passive: true }
+      { passive: false }
     );
   }
 </script>
