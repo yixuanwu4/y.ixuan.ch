@@ -6,6 +6,7 @@ const experience = defineCollection({
     displayTime: z.string().optional(),
     displayLink: z.string().optional(),
     displaySkills: z.array(z.string()).optional(),
+    date: z.string()
   }),
 });
 
