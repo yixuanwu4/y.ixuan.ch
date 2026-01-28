@@ -1,5 +1,5 @@
 :root {
-  --color-page-bg:  #161823;
+  --color-page-bg:  #0f172a;
   --color-display-card-bg: rgba(45, 47, 56, 0.2);
   --color-text-default: #e2e8f0;
   --color-text-unselect: #64748b;
@@ -57,6 +57,9 @@
   --width-xl: 6rem;
   --width-project-card: 40rem;
   --width-project-card-md: 20rem;
+
+  --x: 0px;
+  --y: 0px;
 }
 
 html {

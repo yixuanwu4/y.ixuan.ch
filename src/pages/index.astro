@@ -14,9 +14,38 @@ import '@fontsource-variable/inter';
     <title>YWU</title>
   </head>
   <body>
+    <div id="spotlight"></div>
     <main>
       <Sidebar/>
       <MainContent/>
     </main>
   </body>
 </html>
+
+<style>
+  #spotlight {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 999;
+
+    background: radial-gradient(
+    circle 700px at var(--x, 50%) var(--y, 50%),
+    rgba(59, 130, 246, .1),
+    rgba(59, 130, 246, .06) 35%,
+    rgba(59, 130, 246, .04) 55%,
+    rgba(59, 130, 246, .02) 70%
+  );
+    
+  }
+</style>
+
+<script is:inline>
+  const updateSpotlight = (e) => {
+    document.documentElement.style.setProperty("--x", `${e.clientX}px`);
+    document.documentElement.style.setProperty("--y", `${e.clientY}px`);
+  };
+
+  window.addEventListener("mousemove", updateSpotlight);
+  window.addEventListener("mouseenter", updateSpotlight);
+</script>
