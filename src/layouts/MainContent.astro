@@ -25,16 +25,41 @@ import Project from "../sections/Projects.astro";
 </style>
 
 <script>
-  const mainContent = document.querySelector(".mainContent");
 
-  if (mainContent) {
+  const mainContent = document.querySelector(".mainContent");
+  const mediaQuery = window.matchMedia("(min-width: 1025px)");
+
+  function enableDesktopScroll() {
+    if (!mainContent) return;
+
     window.addEventListener(
       "wheel",
-      (e) => {
-        e.preventDefault();
-        mainContent.scrollTop += e.deltaY;
-      },
+      desktopWheelHandler,
       { passive: false }
     );
   }
+
+  function disableDesktopScroll() {
+    window.removeEventListener("wheel", desktopWheelHandler);
+  }
+
+  function desktopWheelHandler(e) {
+    e.preventDefault();
+    mainContent.scrollTop += e.deltaY;
+  }
+
+  // 初始判断
+  if (mediaQuery.matches) {
+    enableDesktopScroll();
+  }
+
+  // 监听屏幕变化（窗口缩放）
+  mediaQuery.addEventListener("change", (e) => {
+    if (e.matches) {
+      enableDesktopScroll();
+    } else {
+      disableDesktopScroll();
+    }
+  });
+
 </script>
