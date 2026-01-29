@@ -16,6 +16,7 @@ const projects = defineCollection({
     displayImg: z.string(),
     displayLink: z.string(),
     displaySkills: z.array(z.string()).optional(),
+    date: z.string()
   }),
 });
 

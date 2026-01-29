@@ -6,4 +6,4 @@ displaySkills : ["Relativity", "Python", "SQL"]
 date: "2024-04-01"
 ---
 
-I was involved in several projects and participated in processing digital evidence (Outlook emails, Teams chat conversations, loose files, etc.), which allowed me to gained experience in tackling unstructured or corrupted raw data using Python and SQL. After noticing the redundancy in the decommissioning tasks of legacy projects, I developed a programme to automate the workflow, greatly reducing manual eﬀort and saving time. Additionally, I have also worked with PowerBI, Brainspace and GenAI technology."
+I was involved in several projects and participated in processing digital evidence (Outlook emails, Teams chat conversations, loose files, etc.), which allowed me to gained experience in tackling unstructured or corrupted raw data using Python and SQL. After noticing the redundancy in the decommissioning tasks of legacy projects, I developed a programme to automate the workflow, greatly reducing manual eﬀort and saving time. Additionally, I have also worked with PowerBI, Brainspace and GenAI technology.
