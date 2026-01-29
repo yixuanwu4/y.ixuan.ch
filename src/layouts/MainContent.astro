@@ -48,12 +48,10 @@ import Project from "../sections/Projects.astro";
     mainContent.scrollTop += e.deltaY;
   }
 
-  // 初始判断
   if (mediaQuery.matches) {
     enableDesktopScroll();
   }
 
-  // 监听屏幕变化（窗口缩放）
   mediaQuery.addEventListener("change", (e) => {
     if (e.matches) {
       enableDesktopScroll();
