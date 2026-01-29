@@ -3,6 +3,9 @@ import DisplayCard from "../components/DisplayCard.astro";
 import { getCollection } from "astro:content";
 
 const projects = await getCollection("projects");
+const sortedProjects = projects.sort(
+  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+);
 ---
 <section class="projects card-container" id="projects">
   <div class="sectionTitle">PROJECTS</div>
