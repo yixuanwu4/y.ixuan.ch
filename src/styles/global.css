@@ -107,7 +107,7 @@ html {
   scroll-behavior: smooth;
 }
 
-#about, #experience, #projects {
+#about-section, #experience-section, #projects-section {
   scroll-margin-top: var(--spacing-xxl);
 }
 

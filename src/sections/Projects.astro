@@ -7,7 +7,7 @@ const sortedProjects = projects.sort(
   (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
 );
 ---
-<section class="projects card-container" id="projects">
+<section class="projects card-container" id="projects-section">
   <div class="sectionTitle">PROJECTS</div>
   {projects.map(item => (
     <DisplayCard

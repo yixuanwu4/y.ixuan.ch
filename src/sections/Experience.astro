@@ -8,7 +8,7 @@ const sortedExperiences = experiences.sort(
   (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
 );
 ---
-<section class="experience card-container" id="experience">
+<section class="experience card-container" id="experience-section">
   <div class="sectionTitle">EXPERIENCE</div>
   {sortedExperiences.map(item => (
     <DisplayCard
