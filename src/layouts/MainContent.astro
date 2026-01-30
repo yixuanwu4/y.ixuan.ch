@@ -27,37 +27,16 @@ import Project from "../sections/Projects.astro";
 <script>
 
   const mainContent = document.querySelector(".mainContent");
-  const mediaQuery = window.matchMedia("(min-width: 1025px)");
-
-  function enableDesktopScroll() {
-    if (!mainContent) return;
-
+  
+  if (window.matchMedia("(min-width: 1025px").matches && mainContent){
     window.addEventListener(
       "wheel",
-      desktopWheelHandler,
-      { passive: false }
+      (e) => {
+        e.preventDefault();
+        mainContent.scrollTop += e.deltaY;
+      },
+      {passive: false}
     );
   }
-
-  function disableDesktopScroll() {
-    window.removeEventListener("wheel", desktopWheelHandler);
-  }
-
-  function desktopWheelHandler(e) {
-    e.preventDefault();
-    mainContent.scrollTop += e.deltaY;
-  }
-
-  if (mediaQuery.matches) {
-    enableDesktopScroll();
-  }
-
-  mediaQuery.addEventListener("change", (e) => {
-    if (e.matches) {
-      enableDesktopScroll();
-    } else {
-      disableDesktopScroll();
-    }
-  });
 
 </script>
