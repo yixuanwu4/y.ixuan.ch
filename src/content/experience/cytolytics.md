@@ -1,5 +1,5 @@
 ---
-displayName : "Software development at Cytolytics GmbH (Germany)"
+displayName : "Software Development at Cytolytics GmbH (Germany)"
 displayTime : "MAR 2021 - AUG 2021"
 displaySkills : ["Scikit-learn", "NLTK", "Matplotlib"]
 date: "2021-03-01"
